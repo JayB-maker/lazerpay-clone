@@ -1,5 +1,5 @@
 export const navs = [{
-    nav: "PRODUCT",
+    nav: "Product",
     navItems: [{
         icon: "fa-solid fa-bag-shopping",
         navItem:"Checkout",
@@ -27,7 +27,7 @@ export const navs = [{
         link: "/",
     }, ]
 }, {
-    nav: "USE CASES",
+    nav: "Use Case",
     navItems: [{
         icon: "fa-solid fa-alien",
         navItem:"Creators",
@@ -55,14 +55,14 @@ export const navs = [{
         link: "/",
     }, ]
 }, {
-    nav: "PRICING",
+    nav: "Pricing",
     navItems: [{
         icon: "fa-solid fa-tag",
         navItem:"Pricing",
         link: "/",
     }, ]
 }, {
-    nav: "FOR BUSINESSES",
+    nav: "For Business",
     navItems: [{
         icon: "fa-solid fa-layer-group",
         navItem:"Why LazerPay",
@@ -80,7 +80,7 @@ export const navs = [{
         link: "/",
     }, ]
 }, {
-    nav: "FOR DEVELOPER",
+    nav: "For Developer",
     navItems: [{
         icon: "fa-solid fa-sun-bright",
         navItem:"Quick Start",
@@ -98,7 +98,7 @@ export const navs = [{
         link: "/",
     }, ]
 }, {
-    nav: "COMPANY",
+    nav: "Company",
     navItems: [{
         icon: "fa-solid fa-briefcase",
         navItem:"About",

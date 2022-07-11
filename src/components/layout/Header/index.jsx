@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { navs } from '../../../data/data'
-import { Headers, Image, LinkText, InnerHeaders, Navbar, Navs, NavItems, Nav, Text, NavIcon, NavDescription } from '../../ui'
+import { Headers, Image, LinkText, InnerHeaders, Navbar, Navs, NavItems, Nav, Text, NavIcon, NavDescription, HeaderCTA } from '../../ui'
 
 const Header = () => {
   const [isHover, setIsHover] = useState(false)
@@ -24,13 +24,13 @@ const Header = () => {
     <>
       <Headers>
         <InnerHeaders>
-          <LinkText to="/">
+          <LinkText to="/" style={{flex:"0.4"}}>
           <Image src="assets/logo.png" alt="logo" />
           </LinkText>
           <Navbar>
             {navs.map((item, key) => (
               <Navs key={key} onMouseEnter={() => toggle(key)} onMouseLeave={() => toggle(key)}>
-                <Text style={{cursor:"pointer"}} >{item.nav}</Text>
+                <Text style={{cursor:"pointer", fontWeight:"700", fontSize:"18px"}} >{item.nav}</Text>
                 {isHover === key && <NavItems className='navv'>
                   {item.navItems.map((subItem, key) => (
                     <LinkText to={subItem.link}>
@@ -49,6 +49,14 @@ const Header = () => {
               </Navs>
             ))}
           </Navbar>
+          <HeaderCTA>
+            <LinkText to="/login">
+              Sign In
+            </LinkText>
+            <LinkText to="/signup">
+              Create Account
+            </LinkText>
+          </HeaderCTA>
         </InnerHeaders>
       </Headers>
     </>

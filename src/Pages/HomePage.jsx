@@ -14,7 +14,7 @@ const HomePage = () => {
   return (
     <>
     <Header />
-    <HeroSection />
+    {/* <HeroSection />
     <GrowWithLazerPay />
     <PowerOfCrypto />
     <AcceptPayment />
@@ -22,7 +22,7 @@ const HomePage = () => {
     <PowerYourApp />
     <WhoCanUseLazerPay />
     <GetStarted />
-    <Footer />
+    <Footer /> */}
     </>
   )
 }
