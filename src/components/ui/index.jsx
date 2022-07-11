@@ -46,7 +46,8 @@ export const NavItems = styled.div`
 
 `;
 export const Text = styled.p`
-
-
-}
+`;
+export const NavIcon = styled.div`
+`;
+export const NavDescription = styled.div`
 `;

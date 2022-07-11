@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { navs } from '../../../data/data'
-import { Headers, Image, LinkText, InnerHeaders, Navbar, Navs, NavItems, Nav, Text } from '../../ui'
+import { Headers, Image, LinkText, InnerHeaders, Navbar, Navs, NavItems, Nav, Text, NavIcon, NavDescription } from '../../ui'
 
 const Header = () => {
   const [isHover, setIsHover] = useState(false)
@@ -35,8 +35,13 @@ const Header = () => {
                   {item.navItems.map((subItem, key) => (
                     <LinkText to={subItem.link}>
                       <Nav key={key}>
+                      <NavIcon>
                       <i className={subItem.icon} />
                       <Text>{subItem.navItem}</Text>
+                      </NavIcon>
+                      <NavDescription>
+                        <Text>{subItem.description}</Text>
+                      </NavDescription>
                     </Nav>
                     </LinkText>
                   ))}
