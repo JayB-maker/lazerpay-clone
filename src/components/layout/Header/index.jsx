@@ -29,8 +29,8 @@ const Header = () => {
           </LinkText>
           <Navbar>
             {navs.map((item, key) => (
-              <Navs key={key}>
-                <Text style={{cursor:"pointer"}} onMouseEnter={() => toggle(key)} >{item.nav}</Text>
+              <Navs key={key} onMouseEnter={() => toggle(key)} onMouseLeave={() => toggle(key)}>
+                <Text style={{cursor:"pointer"}} >{item.nav}</Text>
                 {isHover === key && <NavItems className='navv'>
                   {item.navItems.map((subItem, key) => (
                     <LinkText to={subItem.link}>
