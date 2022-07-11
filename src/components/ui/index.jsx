@@ -30,3 +30,23 @@ export const Grid = styled.div`
     justifyContent: center;
 
 `
+
+export const Navbar = styled.div`
+    display: flex;
+    gap: 10px;
+`;
+
+export const Navs = styled.div`
+
+`;
+export const Nav = styled.div`
+
+`;
+export const NavItems = styled.div`
+
+`;
+export const Text = styled.p`
+
+
+}
+`;
