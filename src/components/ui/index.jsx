@@ -58,11 +58,14 @@ export const Nav = styled.div`
     background-color: ${(props) => props.theme.primary};
     color: ${(props) => props.theme.accent};
   }
+  @media screen and (max-width: 1024px) {
+    padding: 5px 0;
+  }
 `;
 
 export const NavItems = styled.div`
   background-color: ${(props) => props.theme.white};
-  padding: 20px;
+  padding: 0px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -132,4 +135,46 @@ export const HeaderCTA = styled.div`
   gap: 50px;
   font-size: 18px;
   font-weight: 700;
+`;
+
+// --------------------------MOBILE MENU
+
+export const MobileHeader = styled.div`
+  display: none;
+
+  @media screen and (max-width: 1024px) {
+    display: unset;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+  }
+`;
+export const InnerMobileHeader = styled.div`
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+`;
+export const MobileLogo = styled.img`
+  width: 100%;
+`;
+export const MobileNav = styled.div`
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  background-color: ${(props) => props.theme.white};
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px 10px 0;
+`;
+
+export const Navigations = styled.div`
+  //   padding: 0 10px;
 `;

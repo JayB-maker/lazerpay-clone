@@ -17,6 +17,11 @@ import {
   TitleText,
   TextBlue,
   NavWrapper,
+  MobileHeader,
+  MobileNav,
+  InnerMobileHeader,
+  MobileLogo,
+  Navigations,
 } from "../../ui";
 
 const Header = () => {
@@ -108,6 +113,58 @@ const Header = () => {
           </HeaderCTA>
         </InnerHeaders>
       </Headers>
+      <MobileHeader>
+        <InnerMobileHeader>
+          <LinkText to="/" style={{ width: "30%" }}>
+            <MobileLogo src="assets/logo.png" alt="logo" />
+          </LinkText>
+          <i
+            style={{
+              fontSize: "20px",
+              cursor: "pointer",
+            }}
+            className="fa-solid fa-bars"
+            onClick={() => setClicked(true)}
+          />
+        </InnerMobileHeader>
+        {clicked && (
+          <MobileNav>
+            {navs.map((item, key) => (
+              <Navigations>
+                <>
+                  <Text
+                    style={{
+                      fontWeight: "800",
+                      width: "100%",
+                      paddingBottom: "10px",
+                      fontSize: "14px",
+                    }}
+                  >
+                    {item.nav.toUpperCase()}
+                  </Text>
+                  <NavItem>
+                    {item.navItems.map((subItem, key) => (
+                      <LinkText to={subItem.link}>
+                        <Nav key={key}>
+                          <NavIcon>
+                            <i className={subItem.icon} />
+                            <TitleText
+                              style={{ fontWeight: "400", fontSize: "14px" }}
+                            >
+                              {subItem.navItem}
+                            </TitleText>
+                          </NavIcon>
+                        </Nav>
+                      </LinkText>
+                    ))}
+                  </NavItem>
+                </>
+              </Navigations>
+            ))}
+          </MobileNav>
+        )}
+      </MobileHeader>
+      ;
     </>
   );
 };
