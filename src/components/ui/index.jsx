@@ -65,7 +65,7 @@ export const Nav = styled.div`
 
 export const NavItems = styled.div`
   background-color: ${(props) => props.theme.white};
-  padding: 0px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -135,6 +135,13 @@ export const HeaderCTA = styled.div`
   gap: 50px;
   font-size: 18px;
   font-weight: 700;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    margin-top: 50px;
+  }
 `;
 
 // --------------------------MOBILE MENU
@@ -173,6 +180,7 @@ export const MobileNav = styled.div`
   flex-direction: column;
   gap: 10px;
   padding: 30px 10px 0;
+  border-bottom: 1px solid rgb(179, 179, 179);
 `;
 
 export const Navigations = styled.div`

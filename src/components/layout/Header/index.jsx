@@ -129,6 +129,16 @@ const Header = () => {
         </InnerMobileHeader>
         {clicked && (
           <MobileNav>
+            <i
+              style={{
+                fontSize: "24px",
+                cursor: "pointer",
+                position: "absolute",
+                right: "20px",
+              }}
+              className="fa-solid fa-times"
+              onClick={() => setClicked(false)}
+            />
             {navs.map((item, key) => (
               <Navigations>
                 <>
@@ -161,6 +171,25 @@ const Header = () => {
                 </>
               </Navigations>
             ))}
+            <HeaderCTA>
+              <LinkText to="/login" style={{ color: "black" }}>
+                Sign In
+              </LinkText>
+              <LinkText
+                to="/signup"
+                style={{
+                  color: "white",
+                  backgroundColor: "#125bc9",
+                  padding: "10px",
+                  borderRadius: "5px",
+                  width: "100%",
+                  textAlign: "center",
+                  marginBottom: "30px",
+                }}
+              >
+                Create Account
+              </LinkText>
+            </HeaderCTA>
           </MobileNav>
         )}
       </MobileHeader>
