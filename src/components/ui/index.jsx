@@ -49,15 +49,16 @@ export const Nav = styled.div`
 export const NavItems = styled.div`
 background-color: ${(props) => props.theme.white};
 padding: 20px;
+display: flex;
+flex-direction: column;
+gap: 20px;
 border-radius: 10px;
 width: 600px;
 position: absolute;
 right:50%;
 transform: translateX(55%);
 top: 30px;
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 30px;
+
 box-shadow: 0 -3px 20px rgb(179, 179, 179);
 
 &::before{
@@ -69,8 +70,14 @@ box-shadow: 0 -3px 20px rgb(179, 179, 179);
     top:-500px;
     z-index: 10;
 }
-
 `;
+
+export const NavItem = styled.div`
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 30px;
+`;
+
 export const Text = styled.p`
 font-weight: ${(props) => props.weight && `${props.weight}`};
 `;

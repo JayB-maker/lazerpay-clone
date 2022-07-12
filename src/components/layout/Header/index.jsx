@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { navs } from '../../../data/data'
-import { Headers, Image, LinkText, InnerHeaders, Navbar, Navs, NavItems, Nav, Text, NavIcon, NavDescription, HeaderCTA } from '../../ui'
+import { Headers, Image, LinkText, InnerHeaders, Navbar, Navs, NavItems, Nav, Text, NavIcon, NavDescription, HeaderCTA, NavItem } from '../../ui'
 
 const Header = () => {
   const [isHover, setIsHover] = useState(false)
@@ -11,13 +11,6 @@ const Header = () => {
     }
 
     setIsHover(index);  
-  }
-
-  const hover = (index) => {
-    if (isHover === index && index.onMouseEnter === true){
-      setIsHover(true)
-    }
-    setIsHover(false)
   }
 
   return (
@@ -32,19 +25,23 @@ const Header = () => {
               <Navs key={key} onMouseEnter={() => toggle(key)} onMouseLeave={() => toggle(key)}>
                 <Text style={{cursor:"pointer", fontWeight:"700", fontSize:"18px"}} >{item.nav}</Text>
                 {isHover === key && <NavItems>
-                  {item.navItems.map((subItem, key) => (
-                    <LinkText to={subItem.link}>
-                      <Nav key={key}>
-                      <NavIcon>
-                      <i className={subItem.icon} />
-                      <Text>{subItem.navItem}</Text>
-                      </NavIcon>
-                      <NavDescription>
-                        <Text>{subItem.description}</Text>
-                      </NavDescription>
-                    </Nav>
-                    </LinkText>
-                  ))}
+                  <Text style={{fontWeight: "800", width:"100%", paddingBottom:"10px", borderBottom:"0.5px solid rgb(179, 179, 179)"}}>{item.nav}</Text>
+                  <hr />
+                  <NavItem>
+                    {item.navItems.map((subItem, key) => (
+                      <LinkText to={subItem.link}>
+                        <Nav key={key}>
+                        <NavIcon>
+                        <i className={subItem.icon} />
+                        <Text>{subItem.navItem}</Text>
+                        </NavIcon>
+                        <NavDescription>
+                          <Text>{subItem.description}</Text>
+                        </NavDescription>
+                      </Nav>
+                      </LinkText>
+                    ))}
+                  </NavItem>
                 </NavItems>}
               </Navs>
             ))}
