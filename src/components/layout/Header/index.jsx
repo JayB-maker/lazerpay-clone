@@ -31,7 +31,7 @@ const Header = () => {
             {navs.map((item, key) => (
               <Navs key={key} onMouseEnter={() => toggle(key)} onMouseLeave={() => toggle(key)}>
                 <Text style={{cursor:"pointer", fontWeight:"700", fontSize:"18px"}} >{item.nav}</Text>
-                {isHover === key && <NavItems className='navv'>
+                {isHover === key && <NavItems>
                   {item.navItems.map((subItem, key) => (
                     <LinkText to={subItem.link}>
                       <Nav key={key}>
@@ -50,10 +50,10 @@ const Header = () => {
             ))}
           </Navbar>
           <HeaderCTA>
-            <LinkText to="/login">
+            <LinkText to="/login" style={{color: "black"}}>
               Sign In
             </LinkText>
-            <LinkText to="/signup">
+            <LinkText to="/signup" style={{color:"white", backgroundColor:"#125bc9", padding:"10px", borderRadius:"5px"}}>
               Create Account
             </LinkText>
           </HeaderCTA>

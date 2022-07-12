@@ -6,12 +6,12 @@ export const navs = [{
         description: "Accept truly borderless crypto payments from your customers",
         link: "/",
     }, {
-        icon: "fa-solid fa-hexagon-image",
+        icon: "fa-solid fa-coins",
         navItem:"Lazer Token",
         description: "Utility token on the lazerpay ecosystem",
         link: "/",
     }, {
-        icon: "fa-solid fa-globe-stand",
+        icon: "fa-solid fa-inbox",
         navItem:"Earn",
         description: "Crypto investment with stellar interests, and zero risks",
         link: "/",
@@ -29,7 +29,7 @@ export const navs = [{
 }, {
     nav: "Use Case",
     navItems: [{
-        icon: "fa-solid fa-alien",
+        icon: "fa-solid fa-circle-plus",
         navItem:"Creators",
         description: "Get paid easily doing creative work with crypto.",
         link: "/",
@@ -39,7 +39,7 @@ export const navs = [{
         description: "Power your startup with our crypto payment tools and libraries.",
         link: "/",
     }, {
-        icon: "fa-solid fa-sausage",
+        icon: "fa-solid fa-apple-whole",
         navItem:"Saas",
         description: "Collect recurring payments from customers anywhere.",
         link: "/",
@@ -69,7 +69,7 @@ export const navs = [{
         description: "Set up in minutes, receive payment from anywhere in seconds.",
         link: "/",
     }, {
-        icon: "fa-solid fa-arrow-turn-down-right",
+        icon: "fa-solid fa-microchip",
         navItem:"How it Works",
         description: "Learn how we can help grow your business with crypto.",
         link: "/",
@@ -82,12 +82,12 @@ export const navs = [{
 }, {
     nav: "For Developer",
     navItems: [{
-        icon: "fa-solid fa-sun-bright",
+        icon: "fa-solid fa-sun",
         navItem:"Quick Start",
         description: "Integrate Lazerpay products and tools in minutes.",
         link: "/",
     }, {
-        icon: "fa-solid fa-books",
+        icon: "fa-solid fa-swatchbook",
         navItem:"Libraries",
         description: "Use our client, server and UI libraries to integrate with Lazerpay.",
         link: "/",
@@ -105,22 +105,22 @@ export const navs = [{
         description: "Empowering businesses through cross-border payments.",
         link: "/",
     }, {
-        icon: "fa-solid fa-envelope-dot",
+        icon: "fa-solid fa-envelope",
         navItem:"Contact",
         description: "We're one click away. Reach out to us, get your questions answered.",
         link: "/",
     }, {
-        icon: "fa-solid fa-users-medical",
+        icon: "fa-solid fa-people-group",
         navItem:"Team",
         description: "Meet the Lazer Team. Join us to build the future of payments.",
         link: "/",
     }, {
-        icon: "fa-solid fa-pen-line",
+        icon: "fa-solid fa-blog",
         navItem:"Blog",
         description: "Stay ahead with stories, insights and news from the Lazer Team",
         link: "/",
     }, {
-        icon: "fa-solid fa-user-tie-hair",
+        icon: "fa-solid fa-user",
         navItem:"Careers",
         description: "Join forces with us to power borderless crypto payments.",
         link: "/",
