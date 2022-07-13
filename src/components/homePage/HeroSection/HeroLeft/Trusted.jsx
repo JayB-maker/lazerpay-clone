@@ -6,6 +6,9 @@ const TrustedContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media screen and (max-width: 600px) {
+    margin-top: 30px;
+  }
 `;
 
 const TrustedImages = styled.div`
@@ -15,15 +18,23 @@ const TrustedImages = styled.div`
   gap: 20px;
 
   @media screen and (max-width: 1024px) {
-    width: 40%;
-    gap: 10px;
+    width: 30%;
+    gap: 25px;
+  }
+`;
+const TrustedText = styled.p`
+  font-weight: 700;
+
+  @media screen and (max-width: 1024px) {
+    font-weight: 400;
+    font-size: 12px;
   }
 `;
 
 const Trusted = () => {
   return (
     <TrustedContainer>
-      <Text style={{ fontWeight: "700" }}>Trusted by</Text>
+      <TrustedText>Trusted by</TrustedText>
       <TrustedImages>
         <Image
           style={{ width: "60%" }}

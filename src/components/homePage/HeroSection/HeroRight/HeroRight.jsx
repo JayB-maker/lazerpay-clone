@@ -6,15 +6,22 @@ const RightDiv = styled.div`
   flex: 4;
 `;
 
+const HeroImage = styled.img`
+  width: 100%;
+
+  //   @media screen and (max-width: 1024px) {
+  //     width: 100%;
+  //   }
+  //   @media screen and (max-width: 600px) {
+  //     width: 100%;
+  //   }
+`;
+
 const HeroRight = () => {
   return (
     <>
       <RightDiv>
-        <Image
-          style={{ width: "100%" }}
-          src="assets/home.gif"
-          alt="home"
-        ></Image>
+        <HeroImage src="assets/home.gif" alt="home"></HeroImage>
       </RightDiv>
     </>
   );

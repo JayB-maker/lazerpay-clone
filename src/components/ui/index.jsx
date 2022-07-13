@@ -2,15 +2,15 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Headers = styled.div`
+  position: fixed;
+  background-color: ${(props) => props.theme.white};
   width: 100vw;
   padding: 24px 0;
   box-sizing: border-box;
   height: 82px;
 
   @media screen and (max-width: 1024px) {
-    * {
-      display: none;
-    }
+    display: none;
   }
 `;
 
@@ -150,6 +150,7 @@ export const MobileHeader = styled.div`
   display: none;
 
   @media screen and (max-width: 1024px) {
+    background-color: ${(props) => props.theme.primary};
     display: unset;
     position: fixed;
     top: 0;
@@ -159,9 +160,10 @@ export const MobileHeader = styled.div`
 export const InnerMobileHeader = styled.div`
   @media screen and (max-width: 1024px) {
     display: flex;
-    width: 95%;
+    // width: 90%;
+    width: 100%;
     margin: 0 auto;
-    padding: 15px 0;
+    padding: 15px 16px;
     align-items: center;
     justify-content: space-between;
   }

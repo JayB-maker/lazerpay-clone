@@ -21,24 +21,31 @@ const LinkTexts = styled(Link)`
   &:hover {
     gap: 15px;
   }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 14px;
+  }
+`;
+
+const LinkTextss = styled(Link)`
+  color: ${(props) => props.theme.white};
+  background-color: ${(props) => props.theme.accent};
+  font-weight: 700;
+  transition: 500ms ease;
+  border-radius: 5px;
+  padding: 15px 30px;
+
+  @media screen and (max-width: 1024px) {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
 `;
 
 const HeroCTA = () => {
   return (
     <>
       <CTA>
-        <LinkText
-          style={{
-            backgroundColor: "blue",
-            color: "White",
-            padding: "15px 30px",
-            fontWeight: "700",
-            borderRadius: "5px",
-          }}
-          to="/"
-        >
-          Get Started
-        </LinkText>
+        <LinkTextss to="/">Get Started</LinkTextss>
         <LinkTexts to="/">
           Schedule Demo <i className="fa-solid fa-angle-right"></i>
         </LinkTexts>
