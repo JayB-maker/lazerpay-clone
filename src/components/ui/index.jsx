@@ -69,20 +69,20 @@ export const NavItems = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
   position: relative;
   width: 100%;
   box-shadow: 0 -3px 40px rgb(179, 179, 179);
 
   &::before {
     content: "";
-    height: 50px;
-    width: 50px;
+    height: 20px;
+    width: 20px;
     background-color: ${(props) => props.theme.white};
     position: absolute;
-    top: -25px;
+    top: -10px;
     transform: rotate(45deg);
-    left: 270px;
+    left: 280px;
   }
 `;
 export const NavWrapper = styled.div`
@@ -91,7 +91,7 @@ export const NavWrapper = styled.div`
   position: absolute;
   right: 50%;
   transform: translateX(55%);
-  top: 30px;
+  top: -10px;
 `;
 
 export const NavItem = styled.div`
