@@ -73,6 +73,7 @@ export const NavItems = styled.div`
   position: relative;
   width: 100%;
   box-shadow: 0 -3px 20px rgb(179, 179, 179);
+  margin-top: -30px;
 
   &::before {
     content: "";
@@ -91,7 +92,7 @@ export const NavWrapper = styled.div`
   position: absolute;
   right: 50%;
   transform: translateX(55%);
-  top: -5px;
+  top: 20px;
 `;
 
 export const NavItem = styled.div`
