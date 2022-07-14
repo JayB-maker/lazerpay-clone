@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const GrowWithLazerPay = () => {
-  return (
-    <div>GrowWithLazerPay</div>
-  )
-}
+  return <></>;
+};
 
-export default GrowWithLazerPay
+export default GrowWithLazerPay;
