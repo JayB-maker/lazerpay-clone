@@ -16,7 +16,7 @@ const HomePage = () => {
       <Header />
       <HeroSection />
       <GrowWithLazerPay />
-      {/* <PowerOfCrypto /> */}
+      <PowerOfCrypto />
       {/* <AcceptPayment /> */}
       {/* <AllInOne /> */}
       {/* <PowerYourApp /> */}

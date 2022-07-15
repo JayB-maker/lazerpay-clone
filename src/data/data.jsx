@@ -212,3 +212,24 @@ export const growWithLazerPayDetails = [
       "As you get paid, you earn Lazerpay tokens, early access to product features, and more.",
   },
 ];
+
+export const powerOfCryptoDetails = [
+  {
+    image: "assets/man-earn1.png",
+    subject: "Multiple Payment Options",
+    details:
+      "Let your customers pay you in crypto however they want. Bank transfers, card payments and more, all with Lazerpay.",
+  },
+  {
+    image: "assets/man-earn3.png",
+    subject: "Fast Withdrawal",
+    details:
+      "Instant payout into your bank account or crypto wallet. Withdraw your funds in Fiat or your preferred cryptocurrency.",
+  },
+  {
+    image: "assets/man-earn2.png",
+    subject: "Earn Interest on Revenue",
+    details:
+      "Make the most of your earnings. Invest your earnings manually or automatically and earn up to 15% interest per annum.",
+  },
+];
