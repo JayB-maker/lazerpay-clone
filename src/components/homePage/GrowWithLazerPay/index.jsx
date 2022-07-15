@@ -91,27 +91,26 @@ const GrowCardBody = styled.p`
   }
 `;
 
-const GrowWithLazerPay = () => {
+const GrowWithLazerPay = ({ arr }) => {
   return (
     <>
-      <GrowContainer>
-        <GrowHeading>
-          <GrowTitleText>Grow With Lazerpay</GrowTitleText>
-          <GrowText>
-            Lazerpay does not only help you to accept payments, we are here to
-            open your business up to the world.
-          </GrowText>
-        </GrowHeading>
-        <GrowBody>
-          {growWithLazerPayDetails.map((item, key) => (
-            <GrowCard key={key}>
-              <i className={item.icon} />
-              <GrowCardHeading>{item.subject}</GrowCardHeading>
-              <GrowCardBody>{item.details}</GrowCardBody>
-            </GrowCard>
-          ))}
-        </GrowBody>
-      </GrowContainer>
+      {arr.map((item, key) => (
+        <GrowContainer key={key}>
+          <GrowHeading>
+            <GrowTitleText>{item.titleText}</GrowTitleText>
+            <GrowText>{item.text}</GrowText>
+          </GrowHeading>
+          <GrowBody>
+            {item.pageDetails.map((subItem, key) => (
+              <GrowCard key={key}>
+                <i className={subItem.icon} />
+                <GrowCardHeading>{subItem.subject}</GrowCardHeading>
+                <GrowCardBody>{subItem.details}</GrowCardBody>
+              </GrowCard>
+            ))}
+          </GrowBody>
+        </GrowContainer>
+      ))}
     </>
   );
 };
