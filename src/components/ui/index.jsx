@@ -14,6 +14,16 @@ export const Headers = styled.div`
   }
 `;
 
+export const Shadow = styled.div`
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  box-shadow: 0 3px 20px rgb(179, 179, 179);
+`;
+
 export const InnerHeaders = styled.div`
   display: flex;
   width: 98vw;

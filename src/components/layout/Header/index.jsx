@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { navs } from "../../../data/data";
 import {
   Headers,
@@ -22,11 +22,13 @@ import {
   InnerMobileHeader,
   MobileLogo,
   Navigations,
+  Shadow,
 } from "../../ui";
 
 const Header = () => {
   const [isHover, setIsHover] = useState(false);
   const [clicked, setClicked] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggle = (index) => {
     if (isHover === index) {
@@ -36,9 +38,26 @@ const Header = () => {
     setIsHover(index);
   };
 
+  const HeaderShadow = () => {
+    if (window.pageYOffset > 0) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    HeaderShadow();
+    window.addEventListener("scroll", HeaderShadow);
+    return () => {
+      window.removeEventListener("scroll", HeaderShadow);
+    };
+  }, []);
+
   return (
     <>
       <Headers>
+        {scrolled && <Shadow></Shadow>}
         <InnerHeaders>
           <LinkText to="/" style={{ flex: "0.5" }}>
             <Image src="assets/logo.png" alt="logo" />
