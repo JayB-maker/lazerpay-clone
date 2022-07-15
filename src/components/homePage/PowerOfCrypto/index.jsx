@@ -15,7 +15,7 @@ const LeftDiv = styled.div`
 `;
 const RightDiv = styled.div`
   flex: 5;
-  height: 630px;
+  height: 600px;
   width: 645px;
   overflow-y: hidden;
 `;
@@ -29,8 +29,13 @@ const CarouselContainer = styled.div`
   // gap: 100px;
 `;
 const Body = styled.div`
-  width: 88%;
+  max-width: 1408px;
   margin: 0 auto;
+`;
+
+const InnerContainer = styled.div`
+  width: 88%;
+  margin: 0 auto 100px;
 `;
 
 const Text = styled.p`
@@ -88,31 +93,40 @@ const PowerOfCrypto = () => {
   return (
     <>
       <Body>
-        <Text>FOR BUSINESS</Text>
-        <TitleText>
-          An easier way to harness the power of crypto to grow your business
-        </TitleText>
-        <CryptoWrapper>
-          <LeftDiv>
-            {powerOfCryptoDetails.map((item, key) => (
-              <CryptoSection key={key}>
-                <SectionTitle>{item.subject}</SectionTitle>
-                <SectionText>{item.details}</SectionText>
-              </CryptoSection>
-            ))}
-          </LeftDiv>
-          <RightDiv>
-            {powerOfCryptoDetails.map((item, key) => (
-              <CarouselContainer
-                style={{
-                  marginTop: key === 0 ? `-${currentSlide * 630}px` : undefined,
-                }}
-              >
-                <Image src={item.image} alt={item.subject} key={key} />
-              </CarouselContainer>
-            ))}
-          </RightDiv>
-        </CryptoWrapper>
+        <InnerContainer>
+          <Text>FOR BUSINESS</Text>
+          <TitleText>
+            An easier way to harness the power of crypto to grow your business
+          </TitleText>
+          <CryptoWrapper>
+            <LeftDiv>
+              {powerOfCryptoDetails.map((item, key) => (
+                <CryptoSection key={key}>
+                  <SectionTitle
+                    style={{
+                      color: currentSlide === key ? "#125bc9" : "#000000",
+                    }}
+                  >
+                    {item.subject}
+                  </SectionTitle>
+                  <SectionText>{item.details}</SectionText>
+                </CryptoSection>
+              ))}
+            </LeftDiv>
+            <RightDiv>
+              {powerOfCryptoDetails.map((item, key) => (
+                <CarouselContainer
+                  style={{
+                    marginTop:
+                      key === 0 ? `-${currentSlide * 690}px` : undefined,
+                  }}
+                >
+                  <Image src={item.image} alt={item.subject} key={key} />
+                </CarouselContainer>
+              ))}
+            </RightDiv>
+          </CryptoWrapper>
+        </InnerContainer>
       </Body>
     </>
   );
