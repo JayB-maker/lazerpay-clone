@@ -5,6 +5,8 @@ import { growWithLazerPayDetails } from "../../../data/data";
 const GrowContainer = styled.div`
   display: flex;
   flex-direction: column;
+  max-width: 1408px;
+  margin: 0 auto;
   align-items: center;
   padding: 100px;
   gap: 70px;
