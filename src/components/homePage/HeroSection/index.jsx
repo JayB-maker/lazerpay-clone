@@ -14,6 +14,7 @@ const Body = styled.div`
 const HeroContainer = styled.div`
   background-color: ${(props) => props.theme.primary};
   margin: 0 auto;
+  max-width: 1408px;
   width: 98%;
   padding: 50px 0;
   border-radius: 5px;

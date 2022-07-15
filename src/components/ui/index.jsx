@@ -26,7 +26,8 @@ export const Shadow = styled.div`
 
 export const InnerHeaders = styled.div`
   display: flex;
-  width: 98vw;
+  max-width: 1408px;
+  width: 98%;
   margin: 0 auto;
   align-items: center;
   gap: 70px;
