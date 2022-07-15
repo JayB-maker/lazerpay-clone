@@ -68,12 +68,23 @@ const CryptoSection = styled.div`
   flex-direction: column;
   gap: 10px;
   padding-right: 20px;
+  position: relative;
+  padding-left: 20px;
 `;
 
 const Image = styled.img`
   width: 100%;
   height: 100%;
   // margin-bottom: 50px;
+`;
+
+const BlueBar = styled.div`
+  position: absolute;
+  height: 100%;
+  left: 0;
+  width: 5px;
+  content: "";
+  background-color: ${(props) => props.theme.accent};
 `;
 
 const PowerOfCrypto = () => {
@@ -102,6 +113,7 @@ const PowerOfCrypto = () => {
             <LeftDiv>
               {powerOfCryptoDetails.map((item, key) => (
                 <CryptoSection key={key}>
+                  {currentSlide === key && <BlueBar />}
                   <SectionTitle
                     style={{
                       color: currentSlide === key ? "#125bc9" : "#000000",
