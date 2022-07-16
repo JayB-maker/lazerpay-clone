@@ -219,40 +219,40 @@ export const growWithLazerPayDetails = [
   },
 ];
 
-export const growWithLazerPayDetails = [
+export const acceptPaymentDetails = [
   {
-    titleText: "Grow With Lazerpay",
-    text: "Lazerpay does not only help you to accept payments, we are here to open your business up to the world.",
+    titleText: "Accept payments and grow your business with our tools",
+    text: "Powerful business tools to give you and your business, lightning speed access to crypto payments and payouts.",
     pageDetails: [
       {
-        icon: "fa-solid fa-money-check-dollar",
-        subject: "Accept payments",
+        icon: "fa-solid fa-eject",
+        subject: "Payments Buttons",
         details:
-          "Receive crypto payments from your customers. Get paid the way you choose.",
+          "Create seamless payment experiences for your customer, just at the tap of a button.",
       },
       {
-        icon: "fa-solid fa-wallet",
-        subject: "Business Wallet",
+        icon: "fa-solid fa-link",
+        subject: "Payment Links",
         details:
-          "Get equiped with a secure wallet to accept and manage your crypto in one place.",
+          "Create shareable links to request crypto payments from customers worldwide.",
       },
       {
-        icon: "fa-solid fa-earth-americas",
-        subject: "Global Payout",
+        icon: "fa-solid fa-bag-shopping",
+        subject: "Payment checkout",
         details:
-          "Don’t just get paid, easily withdraw your earnings whenever you want it.",
+          "Easily collect payments from your customers, anywhere. There, one less thing to worry about.",
       },
       {
-        icon: "fa-solid fa-right-to-bracket",
-        subject: "Invest and Earn",
+        icon: "fa-solid fa-prescription-bottle-medical",
+        subject: "Subscriptions",
         details:
-          "Auto-stake options to earn with your crypto. The longer you invest, the more you earn.",
+          "Accept recurring crypto payments from your customers seamlessly. All in one place.",
       },
       {
-        icon: "fa-solid fa-database",
-        subject: "Loyalty Programs",
+        icon: "fa-solid fa-store",
+        subject: "Store Front",
         details:
-          "As you get paid, you earn Lazerpay tokens, early access to product features, and more.",
+          "Create customized stores to showcase your products, and receive payments instantly.",
       },
     ],
   },
