@@ -19,6 +19,7 @@ const HomePage = () => {
       <GrowWithLazerPay arr={growWithLazerPayDetails} />
       <PowerOfCrypto />
       <GrowWithLazerPay arr={acceptPaymentDetails} />
+      <PowerOfCrypto />
       {/* <AllInOne /> */}
       {/* <PowerYourApp /> */}
       {/* <WhoCanUseLazerPay /> */}
