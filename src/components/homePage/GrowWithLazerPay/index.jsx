@@ -19,13 +19,16 @@ const GrowTitleText = styled.h3`
   font-family: "space grotesk", san serif;
   font-size: 48px;
   font-weight: 700;
+  text-align: center;
+  padding: 0 100px;
 
   @media screen and (max-width: 600px) {
     font-size: 30px;
+    padding: 0;
   }
 `;
 const GrowText = styled.p`
-  padding: 0 380px;
+  padding: 0 285px;
   font-size: 20px;
   text-align: center;
 
