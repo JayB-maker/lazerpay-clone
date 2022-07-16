@@ -182,34 +182,79 @@ export const navs = [
 
 export const growWithLazerPayDetails = [
   {
-    icon: "fa-solid fa-money-check-dollar",
-    subject: "Accept payments",
-    details:
-      "Receive crypto payments from your customers. Get paid the way you choose.",
+    titleText: "Grow With Lazerpay",
+    text: "Lazerpay does not only help you to accept payments, we are here to open your business up to the world.",
+    pageDetails: [
+      {
+        icon: "fa-solid fa-money-check-dollar",
+        subject: "Accept payments",
+        details:
+          "Receive crypto payments from your customers. Get paid the way you choose.",
+      },
+      {
+        icon: "fa-solid fa-wallet",
+        subject: "Business Wallet",
+        details:
+          "Get equiped with a secure wallet to accept and manage your crypto in one place.",
+      },
+      {
+        icon: "fa-solid fa-earth-americas",
+        subject: "Global Payout",
+        details:
+          "Don’t just get paid, easily withdraw your earnings whenever you want it.",
+      },
+      {
+        icon: "fa-solid fa-right-to-bracket",
+        subject: "Invest and Earn",
+        details:
+          "Auto-stake options to earn with your crypto. The longer you invest, the more you earn.",
+      },
+      {
+        icon: "fa-solid fa-database",
+        subject: "Loyalty Programs",
+        details:
+          "As you get paid, you earn Lazerpay tokens, early access to product features, and more.",
+      },
+    ],
   },
+];
+
+export const growWithLazerPayDetails = [
   {
-    icon: "fa-solid fa-wallet",
-    subject: "Business Wallet",
-    details:
-      "Get equiped with a secure wallet to accept and manage your crypto in one place.",
-  },
-  {
-    icon: "fa-solid fa-earth-americas",
-    subject: "Global Payout",
-    details:
-      "Don’t just get paid, easily withdraw your earnings whenever you want it.",
-  },
-  {
-    icon: "fa-solid fa-right-to-bracket",
-    subject: "Invest and Earn",
-    details:
-      "Auto-stake options to earn with your crypto. The longer you invest, the more you earn.",
-  },
-  {
-    icon: "fa-solid fa-database",
-    subject: "Loyalty Programs",
-    details:
-      "As you get paid, you earn Lazerpay tokens, early access to product features, and more.",
+    titleText: "Grow With Lazerpay",
+    text: "Lazerpay does not only help you to accept payments, we are here to open your business up to the world.",
+    pageDetails: [
+      {
+        icon: "fa-solid fa-money-check-dollar",
+        subject: "Accept payments",
+        details:
+          "Receive crypto payments from your customers. Get paid the way you choose.",
+      },
+      {
+        icon: "fa-solid fa-wallet",
+        subject: "Business Wallet",
+        details:
+          "Get equiped with a secure wallet to accept and manage your crypto in one place.",
+      },
+      {
+        icon: "fa-solid fa-earth-americas",
+        subject: "Global Payout",
+        details:
+          "Don’t just get paid, easily withdraw your earnings whenever you want it.",
+      },
+      {
+        icon: "fa-solid fa-right-to-bracket",
+        subject: "Invest and Earn",
+        details:
+          "Auto-stake options to earn with your crypto. The longer you invest, the more you earn.",
+      },
+      {
+        icon: "fa-solid fa-database",
+        subject: "Loyalty Programs",
+        details:
+          "As you get paid, you earn Lazerpay tokens, early access to product features, and more.",
+      },
+    ],
   },
 ];
 
