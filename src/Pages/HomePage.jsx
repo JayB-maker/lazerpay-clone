@@ -9,15 +9,16 @@ import PowerYourApp from "../components/homePage/PowerYourApp";
 import WhoCanUseLazerPay from "../components/homePage/WhoCanUseLazerPay";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
+import { growWithLazerPayDetails } from "../data/data";
 
 const HomePage = () => {
   return (
     <>
       <Header />
       <HeroSection />
-      <GrowWithLazerPay />
+      <GrowWithLazerPay arr={growWithLazerPayDetails} />
       <PowerOfCrypto />
-      {/* <AcceptPayment /> */}
+      <GrowWithLazerPay arr={growWithLazerPayDetails} />
       {/* <AllInOne /> */}
       {/* <PowerYourApp /> */}
       {/* <WhoCanUseLazerPay /> */}
