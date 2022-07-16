@@ -94,6 +94,17 @@ const GrowCardBody = styled.p`
   }
 `;
 
+const Updates = styled.p`
+  color: #ee6c4d;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight:700;
+  padding:2px 4px;
+  background: ${(props) => props.theme.white};
+  box-shadow: 1px 1px 5px rgb(179, 179, 179);
+  }
+`;
+
 const GrowWithLazerPay = ({ arr }) => {
   return (
     <>
@@ -109,6 +120,7 @@ const GrowWithLazerPay = ({ arr }) => {
                 <i className={subItem.icon} />
                 <GrowCardHeading>{subItem.subject}</GrowCardHeading>
                 <GrowCardBody>{subItem.details}</GrowCardBody>
+                {subItem.updates !== "" && <Updates>{subItem.updates}</Updates>}
               </GrowCard>
             ))}
           </GrowBody>

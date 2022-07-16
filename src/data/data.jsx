@@ -229,30 +229,35 @@ export const acceptPaymentDetails = [
         subject: "Payments Buttons",
         details:
           "Create seamless payment experiences for your customer, just at the tap of a button.",
+        updates: "",
       },
       {
         icon: "fa-solid fa-link",
         subject: "Payment Links",
         details:
           "Create shareable links to request crypto payments from customers worldwide.",
+        updates: "",
       },
       {
         icon: "fa-solid fa-bag-shopping",
         subject: "Payment checkout",
         details:
           "Easily collect payments from your customers, anywhere. There, one less thing to worry about.",
+        updates: "",
       },
       {
         icon: "fa-solid fa-prescription-bottle-medical",
         subject: "Subscriptions",
         details:
           "Accept recurring crypto payments from your customers seamlessly. All in one place.",
+        updates: "Coming soon",
       },
       {
         icon: "fa-solid fa-store",
         subject: "Store Front",
         details:
           "Create customized stores to showcase your products, and receive payments instantly.",
+        updates: "Coming soon",
       },
     ],
   },

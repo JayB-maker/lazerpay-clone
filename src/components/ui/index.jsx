@@ -8,6 +8,7 @@ export const Headers = styled.div`
   padding: 24px 0;
   box-sizing: border-box;
   height: 82px;
+  z-index: 10;
 
   @media screen and (max-width: 1024px) {
     display: none;
