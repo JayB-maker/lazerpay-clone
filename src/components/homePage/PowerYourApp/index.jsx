@@ -60,7 +60,7 @@ const Wrapper = styled.div`
 `;
 
 const Card = styled.div`
-  background-color: ${(props) => props.theme.primary};
+  background-color: ${(props) => props.theme.background};
   padding: 80px 40px;
   display: flex;
   flex-direction: column;
