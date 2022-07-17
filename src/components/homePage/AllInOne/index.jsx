@@ -8,7 +8,7 @@ const Body = styled.div`
 `;
 const InnerContainer = styled.div`
   width: 88%;
-  background-color: ${(props) => props.theme.primary};
+  background-color: ${(props) => props.theme.background};
   border-radius: 10px;
   padding: 80px;
   display: flex;
@@ -110,7 +110,7 @@ const AllInOne = () => {
               pricing and low transaction fees, without breaking the bank.
             </Text>
             <LinkText to="/">
-              View Pricing <i className="fa-solid fa-angle-right"></i>
+              View Pricing <i className="fa-solid fa-angle-right" />
             </LinkText>
           </RigthDiv>
         </InnerContainer>
