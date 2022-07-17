@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { growWithLazerPayDetails } from "../../../data/data";
 
 const GrowContainer = styled.div`
   display: flex;
