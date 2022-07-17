@@ -10,7 +10,7 @@ const Body = styled.div`
 const InnerContainer = styled.div`
   width: 88%;
   margin: 0 auto;
-  background-color: ${(props) => props.theme.primary};
+  background-color: ${(props) => props.theme.background};
   padding: 80px 0;
   border-radius: 10px;
 
