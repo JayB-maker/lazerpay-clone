@@ -190,30 +190,35 @@ export const growWithLazerPayDetails = [
         subject: "Accept payments",
         details:
           "Receive crypto payments from your customers. Get paid the way you choose.",
+        updates: "",
       },
       {
         icon: "fa-solid fa-wallet",
         subject: "Business Wallet",
         details:
           "Get equiped with a secure wallet to accept and manage your crypto in one place.",
+        updates: "",
       },
       {
         icon: "fa-solid fa-earth-americas",
         subject: "Global Payout",
         details:
           "Don’t just get paid, easily withdraw your earnings whenever you want it.",
+        updates: "",
       },
       {
         icon: "fa-solid fa-right-to-bracket",
         subject: "Invest and Earn",
         details:
           "Auto-stake options to earn with your crypto. The longer you invest, the more you earn.",
+        updates: "",
       },
       {
         icon: "fa-solid fa-database",
         subject: "Loyalty Programs",
         details:
           "As you get paid, you earn Lazerpay tokens, early access to product features, and more.",
+        updates: "",
       },
     ],
   },
@@ -281,5 +286,58 @@ export const powerOfCryptoDetails = [
     subject: "Earn Interest on Revenue",
     details:
       "Make the most of your earnings. Invest your earnings manually or automatically and earn up to 15% interest per annum.",
+  },
+];
+
+export const powerYourAppDetails = [
+  {
+    icon: "fa-solid fa-square-plus icon",
+    subject: "Integrate with Lazerpay",
+    details:
+      "Easy-to-follow well documented APIs for integrating crypto payments on your websites and mobile app.",
+    link: "/",
+    handle: "Read documentation",
+  },
+  {
+    icon: "fa-solid fa-database icon",
+    subject: "Explore our libraries",
+    details:
+      "An array of tools to power the future of payments. Unlock the power of crypto for your applications.",
+    link: "/",
+    handle: "View libraries",
+  },
+];
+
+export const whoCanUseLazerPayDetails = [
+  {
+    image: "assets/home-creative.png",
+    subject: "Creators",
+    details: "Get paid easily doing creative work with crypto",
+    link: "/",
+  },
+  {
+    image: "assets/home-startup.png",
+    subject: "Startups",
+    details: "Power your startup with our crypto payment tools and libraries.",
+    link: "/",
+  },
+  {
+    image: "assets/home-saas.png",
+    subject: "Saas",
+    details: "Collect recurring payments from customers anywhere.",
+    link: "/",
+  },
+  {
+    image: "assets/home-ecommerce.png",
+    subject: "E-commerce",
+    details: "Receive unrestricted payments from your clients anywhere.",
+    link: "/",
+  },
+  {
+    image: "assets/home-professional.png",
+    subject: "Professionals",
+    details:
+      "Tap into endless possibilites of growth for your ecommerce store.",
+    link: "/",
   },
 ];
