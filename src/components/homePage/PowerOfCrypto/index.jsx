@@ -50,6 +50,10 @@ const Body = styled.div`
 const InnerContainer = styled.div`
   width: 88%;
   margin: 0 auto 100px;
+
+  @media screen and (max-width: 600px) {
+    width: 92%;
+  }
 `;
 
 const Text = styled.p`
