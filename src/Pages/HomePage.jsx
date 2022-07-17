@@ -1,7 +1,6 @@
 import React from "react";
-// import AcceptPayment from "../components/homePage/AcceptPayment";
 import AllInOne from "../components/homePage/AllInOne";
-// import GetStarted from "../components/homePage/GetStarted";
+import GetStarted from "../components/homePage/GetStarted";
 import GrowWithLazerPay from "../components/homePage/GrowWithLazerPay";
 import HeroSection from "../components/homePage/HeroSection";
 import PowerOfCrypto from "../components/homePage/PowerOfCrypto";
@@ -22,7 +21,7 @@ const HomePage = () => {
       <AllInOne />
       <PowerYourApp />
       <WhoCanUseLazerPay />
-      {/* <GetStarted /> */}
+      <GetStarted />
       {/* <Footer /> */}
     </>
   );

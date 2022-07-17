@@ -133,6 +133,7 @@ const Header = () => {
         </InnerHeaders>
       </Headers>
       <MobileHeader>
+        {scrolled && <Shadow></Shadow>}
         <InnerMobileHeader>
           <LinkText to="/" style={{ width: "30%" }}>
             <MobileLogo src="assets/logo.png" alt="logo" />
