@@ -23,6 +23,7 @@ export const Shadow = styled.div`
   position: absolute;
   top: 0;
   box-shadow: 0 3px 20px rgb(179, 179, 179);
+  z-index: -1;
 `;
 
 export const InnerHeaders = styled.div`
@@ -195,7 +196,7 @@ export const MobileNav = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 30px 10px 0;
+  padding: 30px 16px 0;
   border-bottom: 1px solid rgb(179, 179, 179);
 `;
 

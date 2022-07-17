@@ -341,3 +341,23 @@ export const whoCanUseLazerPayDetails = [
     link: "/",
   },
 ];
+
+export const getStartedDetails = [
+  {
+    icon: "fa-solid fa-building-flag icon",
+    subject: "Are you a business?",
+    details:
+      "Become truly borderless. Unlock the power of crypto for your business.",
+    handle: "See Pricing",
+    link: "/",
+    background: "#E6EBF3",
+  },
+  {
+    icon: "fa-solid fa-terminal icon",
+    subject: "Are you a developer?",
+    details: "Build custom crypto payment solutions with well documented APIs.",
+    handle: "View documentation",
+    link: "/",
+    background: "#FCF7EF",
+  },
+];
