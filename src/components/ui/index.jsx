@@ -6,6 +6,7 @@ export const Container = styled.div`
   background-color: ${(props) => (props.bg ? `${props.bg}` : "transparent")};
   width: ${(props) => (props.width ? `${props.width}` : "unset")};
   max-width: ${(props) => (props.maxwidth ? `${props.maxwidth}` : "unset")};
+  // padding: ${(props) => (props.padding ? `${props.padding}` : "0px")};
   padding-top: ${(props) => (props.ptop ? `${props.ptop}` : "0px")};
   padding-right: ${(props) => (props.pright ? `${props.pright}` : "0px")};
   padding-bottom: ${(props) => (props.pbottom ? `${props.pbottom}` : "0px")};
@@ -22,12 +23,18 @@ export const Container = styled.div`
   height: ${(props) => (props.height ? `${props.height}` : "unset")};
   z-index: ${(props) => (props.index ? `${props.index}` : "unset")};
   display: ${(props) => (props.display ? `${props.display}` : "unset")};
+  flex-direction: ${(props) =>
+    props.flexdirection ? `${props.flexdirection}` : "unset"};
   content: ${(props) => (props.content ? `${props.content}` : "")};
   align-items: ${(props) =>
     props.alignitems ? `${props.alignitems}` : "unset"};
   justify-content: ${(props) =>
     props.justifycontent ? `${props.justifycontent}` : "unset"};
   gap: ${(props) => (props.gap ? `${props.gap}` : "unset")};
+  transform: ${(props) => (props.transform ? `${props.transform}` : "unset")};
+  grid-template-columns: ${(props) =>
+    props.gridcolumn ? `${props.gridcolumn}` : "unset"};
+  box-shadow: ${(props) => (props.shadow ? `${props.shadow}` : "unset")};
 
   @media screen and (max-width: 1024px) {
     display: ${(props) => (props.mddisplay ? `${props.mddisplay}` : "unset")};
@@ -51,6 +58,7 @@ export const LinkText = styled(Link)`
   border-radius: ${(props) => (props.radius ? `${props.radius}` : "0px")};
   width: ${(props) => props.width && `${props.width}`};
   text-align: ${(props) => (props.align ? `${props.align}` : "left")};
+  padding: ${(props) => (props.padding ? `${props.padding}` : "0px")};
   padding-top: ${(props) => (props.ptop ? `${props.ptop}` : "0px")};
   padding-right: ${(props) => (props.pright ? `${props.pright}` : "0px")};
   padding-bottom: ${(props) => (props.pbottom ? `${props.pbottom}` : "0px")};
@@ -121,14 +129,6 @@ export const NavItems = styled.div`
     transform: rotate(45deg);
     left: 280px;
   }
-`;
-export const NavWrapper = styled.div`
-  padding-top: 50px;
-  width: 650px;
-  position: absolute;
-  right: 50%;
-  transform: translateX(55%);
-  top: 20px;
 `;
 
 export const NavItem = styled.div`
