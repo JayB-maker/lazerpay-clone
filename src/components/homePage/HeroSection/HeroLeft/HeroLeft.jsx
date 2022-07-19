@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { LinkText, Text, TitleText } from "../../../ui";
+// import { LinkText } from "../../../ui";
 import HeroCTA from "./HeroCTA";
 import Trusted from "./Trusted";
+import { Link } from "react-router-dom";
 
 const LeftDiv = styled.div`
   flex: 5;
@@ -31,7 +32,8 @@ const HeroTitle = styled.h3`
 `;
 
 const HeroText = styled.p`
-  font-size: 22px;
+  // font-size: 22px;
+  font-size: ${(props) => (props.size ? `${props.size}` : "90px")};
   padding-right: 200px;
 
   @media screen and (max-width: 1024px) {
@@ -77,6 +79,10 @@ const TextHero = styled.p`
   }
 `;
 
+const LinkText = styled(Link)`
+  color: ${(props) => (props.color ? `${props.color}` : "black")};
+`;
+
 const HeroLeft = () => {
   return (
     <>
@@ -85,13 +91,13 @@ const HeroLeft = () => {
           <span>NEW</span>{" "}
           <span>
             Introducing the all-new Lazer Donations -{" "}
-            <LinkText style={{ color: "#125bc9" }} to="/">
+            <LinkText color="#125bc9" to="/">
               Read More
             </LinkText>
           </span>
         </TextHero>
         <HeroTitle>Take your business global in 5 minutes</HeroTitle>
-        <HeroText>
+        <HeroText size="22px">
           Empower your business to accept payments globally, earn rewards and
           invest in crypto.
         </HeroText>
