@@ -4,8 +4,8 @@ import HeroLeft from "./HeroLeft/HeroLeft";
 import HeroRight from "./HeroRight/HeroRight";
 
 const Body = styled.div`
-  width: 100vw;
-  margin-top: 82px;
+  width: 100%;
+  margin-top: 60px;
 
   @media screen and (max-width: 1024px) {
     margin-top: 0;
