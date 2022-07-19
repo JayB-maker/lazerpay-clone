@@ -110,8 +110,29 @@ const Header = () => {
                   {item.nav}
                 </Text>
                 {isHover === key && item.navItems.length > 1 && (
-                  <NavWrapper>
-                    <NavItems>
+                  <Container
+                    ptop="50px"
+                    width="650px"
+                    position="absolute"
+                    right="50%"
+                    transform="translateX(55%)"
+                    top="20px"
+                  >
+                    <Container
+                      bg="white"
+                      display="flex"
+                      position="relative"
+                      width="100%"
+                      gap="20px"
+                      radius="5px"
+                      mtop="-30px"
+                      flexdirection="column"
+                      ptop="20px"
+                      pright="20px"
+                      pleft="20px"
+                      pbottom="20px"
+                      shadow="0 -3px 20px rgb(179, 179, 179)"
+                    >
                       <Text
                         heavy
                         width="100%"
@@ -122,7 +143,7 @@ const Header = () => {
                       >
                         {item.nav}
                       </Text>
-                      <NavItem>
+                      <Container display="grid" gridcolumn="1fr 1fr">
                         {item.navItems.map((subItem, key) => (
                           <LinkText to={subItem.link}>
                             <Nav key={key}>
@@ -140,9 +161,9 @@ const Header = () => {
                             </Nav>
                           </LinkText>
                         ))}
-                      </NavItem>
-                    </NavItems>
-                  </NavWrapper>
+                      </Container>
+                    </Container>
+                  </Container>
                 )}
               </Container>
             ))}
