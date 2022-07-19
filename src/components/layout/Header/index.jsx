@@ -82,14 +82,20 @@ const Header = () => {
           mleft="auto"
           gap="70px"
           alignitems="center"
-          justifycontents="space-between"
+          justifycontent="space-between"
         >
-          <LinkText to="/" style={{ flex: "0.5" }}>
+          <LinkText to="/" flex="0.5">
             <Image width="80%" src="assets/logo.png" alt="logo" />
           </LinkText>
-          <Navbar>
+          <Container
+            display="flex"
+            justifycontent="space-between"
+            width="45%"
+            flex="1.5"
+          >
             {navs.map((item, key) => (
-              <Navs
+              <Container
+                position="relative"
                 key={key}
                 onMouseEnter={() => toggle(key)}
                 onMouseLeave={() => toggle(key)}
@@ -138,9 +144,9 @@ const Header = () => {
                     </NavItems>
                   </NavWrapper>
                 )}
-              </Navs>
+              </Container>
             ))}
-          </Navbar>
+          </Container>
           <HeaderCTA>
             <LinkText to="/login" size="15px" heavy color="black">
               Sign In
