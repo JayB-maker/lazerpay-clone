@@ -1,46 +1,74 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const Headers = styled.div`
-  position: fixed;
-  background-color: ${(props) => props.theme.white};
-  width: 100vw;
-  padding: 24px 0;
+export const Container = styled.div`
+  position: ${(props) => (props.position ? `${props.position}` : "unset")};
+  background-color: ${(props) => (props.bg ? `${props.bg}` : "transparent")};
+  width: ${(props) => (props.width ? `${props.width}` : "50px")};
+  max-width: ${(props) => (props.maxwidth ? `${props.maxwidth}` : "unset")};
+  padding-top: ${(props) => (props.ptop ? `${props.ptop}` : "0px")};
+  padding-right: ${(props) => (props.pright ? `${props.pright}` : "0px")};
+  padding-bottom: ${(props) => (props.pbottom ? `${props.pbottom}` : "0px")};
+  padding-left: ${(props) => (props.pleft ? `${props.pleft}` : "0px")};
+  margin-top: ${(props) => (props.mtop ? `${props.mtop}` : "0px")};
+  margin-right: ${(props) => (props.mright ? `${props.mright}` : "0px")};
+  margin-bottom: ${(props) => (props.mbottom ? `${props.mbottom}` : "0px")};
+  margin-left: ${(props) => (props.mleft ? `${props.mleft}` : "0px")};
+  top: ${(props) => (props.top ? `${props.top}` : "unset")};
+  left: ${(props) => (props.left ? `${props.left}` : "unset")};
+  right: ${(props) => (props.right ? `${props.right}` : "unset")};
+  bottom: ${(props) => (props.bottom ? `${props.bottom}` : "unset")};
   box-sizing: border-box;
-  height: 82px;
-  z-index: 10;
+  height: ${(props) => (props.height ? `${props.height}` : "unset")};
+  z-index: ${(props) => (props.index ? `${props.index}` : "unset")};
+  display: ${(props) => (props.display ? `${props.display}` : "unset")};
+  content: ${(props) => (props.content ? `${props.content}` : "")};
+  align-items: ${(props) =>
+    props.alignitems ? `${props.alignitems}` : "unset"};
+  justify-content: ${(props) =>
+    props.justifycontent ? `${props.justifycontent}` : "unset"};
+  gap: ${(props) => (props.gap ? `${props.gap}` : "unset")};
 
   @media screen and (max-width: 1024px) {
-    display: none;
+    display: ${(props) => (props.mddisplay ? `${props.mddisplay}` : "unset")};
   }
 `;
 
-export const Shadow = styled.div`
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  box-shadow: 0 3px 20px rgb(179, 179, 179);
-  z-index: -1;
-`;
-
-export const InnerHeaders = styled.div`
-  display: flex;
-  max-width: 1408px;
-  width: 98%;
-  margin: 0 auto;
-  align-items: center;
-  gap: 70px;
-  justify-contents: space-between;
-`;
-
 export const Image = styled.img`
-  width: 80%;
+  width: ${(props) => (props.width ? `${props.width}` : "50px")};
+
+  @media screen and (max-width: 1024px) {
+    width: ${(props) => (props.mdwidth ? `${props.mdwidth}` : "50px")};
+  }
 `;
 
-export const LinkText = styled(Link)``;
+export const LinkText = styled(Link)`
+  font-size: ${(props) => (props.size ? `${props.size}` : "20px")};
+  font-weight: ${(props) => (props.heavy ? "700" : "400")};
+  color: ${(props) =>
+    props.color ? `${props.color}` : `${(props) => props.theme.black}`};
+  background-color: ${(props) => (props.bg ? `${props.bg}` : "transparent")};
+  border-radius: ${(props) => (props.radius ? `${props.radius}` : "0px")};
+  width: ${(props) => props.width && `${props.width}`};
+  text-align: ${(props) => (props.align ? `${props.align}` : "left")};
+  padding-top: ${(props) => (props.ptop ? `${props.ptop}` : "0px")};
+  padding-right: ${(props) => (props.pright ? `${props.pright}` : "0px")};
+  padding-bottom: ${(props) => (props.pbottom ? `${props.pbottom}` : "0px")};
+  padding-left: ${(props) => (props.pleft ? `${props.pleft}` : "0px")};
+  margin-top: ${(props) => (props.top ? `${props.top}` : "0px")};
+  margin-right: ${(props) => (props.right ? `${props.right}` : "0px")};
+  margin-bottom: ${(props) => (props.bottom ? `${props.bottom}` : "0px")};
+  margin-left: ${(props) => (props.left ? `${props.left}` : "0px")};
+
+  @media screen and (max-width: 1024px) {
+    width: ${(props) => props.mdwidth && `${props.mdwidth}`};
+    font-size: ${(props) => (props.mdsize ? `${props.mdsize}` : "20px")};
+  }
+  // @media screen and (max-width: 600px) {
+  //   width: ${(props) => props.smwidth && `${props.smwidth}`};
+  //   font-size: ${(props) => (props.smsize ? `${props.smsize}` : "20px")};
+  // }
+`;
 
 export const Grid = styled.div`
   display: flex;
@@ -114,17 +142,69 @@ export const NavItem = styled.div`
 `;
 
 export const Text = styled.p`
-  font-weight: ${(props) => props.weight && `${props.weight}`};
-`;
+  font-size: ${(props) => (props.size ? `${props.size}` : "18px")};
+  font-weight: ${(props) => (props.heavy ? "700" : "400")};
+  color: ${(props) =>
+    props.color ? `${props.color}` : `${(props) => props.theme.black}`};
+  cursor: ${(props) => props.cursor && "pointer"};
+  width: ${(props) => (props.width ? `${props.width}` : "50px")};
+  margin-top: ${(props) => (props.top ? `${props.top}` : "0px")};
+  margin-right: ${(props) => (props.right ? `${props.right}` : "0px")};
+  margin-bottom: ${(props) => (props.bottom ? `${props.bottom}` : "0px")};
+  margin-left: ${(props) => (props.left ? `${props.left}` : "0px")};
+  // border: ${(props) => (props.size ? `${props.size}` : "1px")} solid
+  //   ${(props) => (props.border ? `${props.border}` : "#000000")};
+  background-color: ${(props) => (props.bg ? `${props.bg}` : "transparent")};
+  border-radius: ${(props) => (props.radius ? `${props.radius}` : "0px")};
 
-export const TextBlue = styled.p`
   &:hover {
-    color: ${(props) => props.theme.accent};
+    color: ${(props) =>
+      props.hovercolor
+        ? `${props.hovercolor}`
+        : `${(props) => props.theme.black}`};
   }
+
+  @media screen and (max-width: 1024px) {
+    font-size: ${(props) => (props.mdsize ? `${props.mdsize}` : "18px")};
+    width: ${(props) => (props.mdwidth ? `${props.mdwidth}` : "50px")};
+  }
+  // @media screen and (max-width: 600px) {
+  //   font-size: ${(props) => (props.smsize ? `${props.smsize}` : "18px")};
+  // }
 `;
 
 export const TitleText = styled.h3`
   font-family: "Space Grotesk", sans-serif;
+  font-size: ${(props) => (props.size ? `${props.size}` : "20px")};
+  font-weight: ${(props) => (props.heavy ? "700" : "400")};
+  color: ${(props) =>
+    props.color ? `${props.color}` : `${(props) => props.theme.black}`};
+  cursor: ${(props) => props.cursor && "pointer"};
+  width: ${(props) => (props.width ? `${props.width}` : "50px")};
+  margin-top: ${(props) => (props.top ? `${props.top}` : "0px")};
+  margin-right: ${(props) => (props.right ? `${props.right}` : "0px")};
+  margin-bottom: ${(props) => (props.bottom ? `${props.bottom}` : "0px")};
+  margin-left: ${(props) => (props.left ? `${props.left}` : "0px")};
+  // border: ${(props) => (props.size ? `${props.size}` : "1px")} solid
+  //   ${(props) => (props.border ? `${props.border}` : "#000000")};
+  background-color: ${(props) => (props.bg ? `${props.bg}` : "transparent")};
+  border-radius: ${(props) => (props.radius ? `${props.radius}` : "0px")};
+
+  &:hover {
+    color: ${(props) =>
+      props.hovercolor
+        ? `${props.hovercolor}`
+        : `${(props) => props.theme.black}`};
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: ${(props) => (props.mdsize ? `${props.mdsize}` : "20px")};
+    width: ${(props) => (props.mdwidth ? `${props.mdwidth}` : "50px")};
+  }
+  // @media screen and (max-width: 600px) {
+  //   font-size: ${(props) => (props.smsize ? `${props.smsize}` : "20px")};
+  // width: ${(props) => (props.mdwidth ? `${props.mdwidth}` : "50px")};
+  // }
 `;
 
 export const NavIcon = styled.div`
@@ -146,7 +226,7 @@ export const HeaderCTA = styled.div`
   align-items: center;
   justify-content: flex-end;
   width: 100%;
-  gap: 50px;
+  gap: 30px;
   font-size: 18px;
   font-weight: 700;
 
