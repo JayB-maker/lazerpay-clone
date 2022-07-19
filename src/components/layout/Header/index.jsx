@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { navs } from "../../../data/data";
 import {
-  Headers,
   Image,
   LinkText,
   InnerHeaders,
@@ -15,14 +14,12 @@ import {
   HeaderCTA,
   NavItem,
   TitleText,
-  TextBlue,
   NavWrapper,
   MobileHeader,
   MobileNav,
   InnerMobileHeader,
-  MobileLogo,
   Navigations,
-  Shadow,
+  Container,
 } from "../../ui";
 
 const Header = () => {
@@ -56,11 +53,39 @@ const Header = () => {
 
   return (
     <>
-      <Headers>
-        {scrolled && <Shadow></Shadow>}
-        <InnerHeaders>
+      <Container
+        width="100%"
+        position="fixed"
+        ptop="24px"
+        pbottom="24px"
+        bg="white"
+        index="10"
+        mddisplay="none"
+      >
+        {scrolled && (
+          <Container
+            position="absolute"
+            width="100%"
+            height="100%"
+            index="-1"
+            top="0"
+            style={{ boxShadow: "0 3px 20px rgb(179, 179, 179)" }}
+          ></Container>
+        )}
+        <Container
+          maxwidth="1408px"
+          display="flex"
+          width="98%"
+          mtop="0"
+          mbottom="0"
+          mright="auto"
+          mleft="auto"
+          gap="70px"
+          alignitems="center"
+          justifycontents="space-between"
+        >
           <LinkText to="/" style={{ flex: "0.5" }}>
-            <Image src="assets/logo.png" alt="logo" />
+            <Image width="80%" src="assets/logo.png" alt="logo" />
           </LinkText>
           <Navbar>
             {navs.map((item, key) => (
@@ -69,22 +94,22 @@ const Header = () => {
                 onMouseEnter={() => toggle(key)}
                 onMouseLeave={() => toggle(key)}
               >
-                <TextBlue
-                  style={{
-                    cursor: "pointer",
-                    fontWeight: "700",
-                    fontSize: "16px",
-                  }}
+                <Text
+                  hovercolor="#125bc9"
+                  cursor
+                  heavy
+                  size="16px"
+                  width="100%"
                 >
                   {item.nav}
-                </TextBlue>
+                </Text>
                 {isHover === key && item.navItems.length > 1 && (
                   <NavWrapper>
                     <NavItems>
                       <Text
+                        heavy
+                        width="100%"
                         style={{
-                          fontWeight: "800",
-                          width: "100%",
                           paddingBottom: "10px",
                           borderBottom: "0.5px solid rgb(179, 179, 179)",
                         }}
@@ -97,12 +122,14 @@ const Header = () => {
                             <Nav key={key}>
                               <NavIcon>
                                 <i className={subItem.icon} />
-                                <TitleText style={{ fontWeight: "700" }}>
+                                <TitleText heavy size="18px" width="100%">
                                   {subItem.navItem}
                                 </TitleText>
                               </NavIcon>
                               <NavDescription>
-                                <Text>{subItem.description}</Text>
+                                <Text width="100%" size="15px">
+                                  {subItem.description}
+                                </Text>
                               </NavDescription>
                             </Nav>
                           </LinkText>
@@ -115,28 +142,40 @@ const Header = () => {
             ))}
           </Navbar>
           <HeaderCTA>
-            <LinkText to="/login" style={{ color: "black" }}>
+            <LinkText to="/login" size="15px" heavy color="black">
               Sign In
             </LinkText>
             <LinkText
               to="/signup"
-              style={{
-                color: "white",
-                backgroundColor: "#125bc9",
-                padding: "10px",
-                borderRadius: "5px",
-              }}
+              size="15px"
+              heavy
+              color="white"
+              bg="#125bc9"
+              ptop="7px"
+              pbottom="7px"
+              pright="10px"
+              pleft="10px"
+              radius="5px"
             >
-              Create Account
+              Create an account
             </LinkText>
           </HeaderCTA>
-        </InnerHeaders>
-      </Headers>
+        </Container>
+      </Container>
       <MobileHeader>
-        {scrolled && <Shadow></Shadow>}
+        {scrolled && (
+          <Container
+            position="absolute"
+            width="100%"
+            height="100%"
+            index="-1"
+            top="0"
+            style={{ boxShadow: "0 3px 20px rgb(179, 179, 179)" }}
+          ></Container>
+        )}
         <InnerMobileHeader>
           <LinkText to="/" style={{ width: "30%" }}>
-            <MobileLogo src="assets/logo.png" alt="logo" />
+            <Image mdwidth="100%" src="assets/logo.png" alt="logo" />
           </LinkText>
           <i
             style={{
@@ -162,14 +201,7 @@ const Header = () => {
             {navs.map((item, key) => (
               <Navigations>
                 <>
-                  <Text
-                    style={{
-                      fontWeight: "800",
-                      width: "100%",
-                      paddingBottom: "10px",
-                      fontSize: "14px",
-                    }}
-                  >
+                  <Text heavy mdwidth="100%" bottom="10px" mdsize="14px">
                     {item.nav.toUpperCase()}
                   </Text>
                   <NavItem>
@@ -178,9 +210,7 @@ const Header = () => {
                         <Nav key={key}>
                           <NavIcon>
                             <i className={subItem.icon} />
-                            <TitleText
-                              style={{ fontWeight: "400", fontSize: "14px" }}
-                            >
+                            <TitleText mdsize="14px" mdwidth="100%">
                               {subItem.navItem}
                             </TitleText>
                           </NavIcon>
@@ -192,22 +222,24 @@ const Header = () => {
               </Navigations>
             ))}
             <HeaderCTA>
-              <LinkText to="/login" style={{ color: "black" }}>
+              <LinkText to="/login" color="black" heavy mdsize="18px">
                 Sign In
               </LinkText>
               <LinkText
                 to="/signup"
-                style={{
-                  color: "white",
-                  backgroundColor: "#125bc9",
-                  padding: "10px",
-                  borderRadius: "5px",
-                  width: "100%",
-                  textAlign: "center",
-                  marginBottom: "30px",
-                }}
+                mdsize="18px"
+                color="white"
+                bg="#125bc9"
+                ptop="10px"
+                pbottom="10px"
+                radius="5px"
+                mdwidth="100%"
+                smwidth="100%"
+                heavy
+                bottom="30px"
+                align="center"
               >
-                Create Account
+                Create an account
               </LinkText>
             </HeaderCTA>
           </MobileNav>
