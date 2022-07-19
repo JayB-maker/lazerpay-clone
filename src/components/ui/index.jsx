@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const Container = styled.div`
   position: ${(props) => (props.position ? `${props.position}` : "unset")};
   background-color: ${(props) => (props.bg ? `${props.bg}` : "transparent")};
-  width: ${(props) => (props.width ? `${props.width}` : "50px")};
+  width: ${(props) => (props.width ? `${props.width}` : "unset")};
   max-width: ${(props) => (props.maxwidth ? `${props.maxwidth}` : "unset")};
   padding-top: ${(props) => (props.ptop ? `${props.ptop}` : "0px")};
   padding-right: ${(props) => (props.pright ? `${props.pright}` : "0px")};
@@ -59,6 +59,7 @@ export const LinkText = styled(Link)`
   margin-right: ${(props) => (props.right ? `${props.right}` : "0px")};
   margin-bottom: ${(props) => (props.bottom ? `${props.bottom}` : "0px")};
   margin-left: ${(props) => (props.left ? `${props.left}` : "0px")};
+  flex: ${(props) => (props.flex ? `${props.flex}` : "unset")};
 
   @media screen and (max-width: 1024px) {
     width: ${(props) => props.mdwidth && `${props.mdwidth}`};
@@ -75,12 +76,6 @@ export const Grid = styled.div`
   width: 100%;
   alignitem: center;
   justifycontent: center;
-`;
-
-export const Navbar = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex: 1.5;
 `;
 
 export const Navs = styled.div`
