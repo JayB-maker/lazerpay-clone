@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 export const Container = styled.div`
   position: ${(props) => (props.position ? `${props.position}` : "unset")};
   background-color: ${(props) => (props.bg ? `${props.bg}` : "transparent")};
+  color: ${(props) =>
+    props.color ? `${props.color}` : `${(props) => props.theme.black}`};
   width: ${(props) => (props.width ? `${props.width}` : "unset")};
   max-width: ${(props) => (props.maxwidth ? `${props.maxwidth}` : "unset")};
+  border-radius: ${(props) => (props.radius ? `${props.radius}` : "0px")};
   // padding: ${(props) => (props.padding ? `${props.padding}` : "0px")};
   padding-top: ${(props) => (props.ptop ? `${props.ptop}` : "0px")};
   padding-right: ${(props) => (props.pright ? `${props.pright}` : "0px")};
@@ -36,8 +39,30 @@ export const Container = styled.div`
     props.gridcolumn ? `${props.gridcolumn}` : "unset"};
   box-shadow: ${(props) => (props.shadow ? `${props.shadow}` : "unset")};
 
+  &:hover {
+    background-color: ${(props) => props.hoverbg && `${props.hoverbg}`};
+    color: ${(props) =>
+      props.hovercolor
+        ? `${props.hovercolor}`
+        : `${(props) => props.theme.black}`};
+
+  &::before {
+    content: ${(props) => (props.bcontent ? `${props.bcontent}` : "")};
+    position: ${(props) => (props.bposition ? `${props.bposition}` : "unset")};
+    background-color: ${(props) =>
+      props.bbg ? `${props.bbg}` : "transparent"};
+    width: ${(props) => (props.bwidth ? `${props.bwidth}` : "unset")};
+    height: ${(props) => (props.bheight ? `${props.bheight}` : "unset")};
+    top: ${(props) => (props.btop ? `${props.btop}` : "unset")};
+    transform: ${(props) =>
+      props.btransform ? `${props.btransform}` : "unset"};
+    left: ${(props) => (props.bleft ? `${props.bleft}` : "unset")};
+  }
+
   @media screen and (max-width: 1024px) {
     display: ${(props) => (props.mddisplay ? `${props.mddisplay}` : "unset")};
+    grid-template-columns: ${(props) =>
+      props.mdgridcolumn ? `${props.mdgridcolumn}` : "unset"};
   }
 `;
 
@@ -58,7 +83,7 @@ export const LinkText = styled(Link)`
   border-radius: ${(props) => (props.radius ? `${props.radius}` : "0px")};
   width: ${(props) => props.width && `${props.width}`};
   text-align: ${(props) => (props.align ? `${props.align}` : "left")};
-  padding: ${(props) => (props.padding ? `${props.padding}` : "0px")};
+  // padding: ${(props) => (props.padding ? `${props.padding}` : "0px")};
   padding-top: ${(props) => (props.ptop ? `${props.ptop}` : "0px")};
   padding-right: ${(props) => (props.pright ? `${props.pright}` : "0px")};
   padding-bottom: ${(props) => (props.pbottom ? `${props.pbottom}` : "0px")};
@@ -107,35 +132,6 @@ export const Nav = styled.div`
   }
 `;
 
-export const NavItems = styled.div`
-  background-color: ${(props) => props.theme.white};
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  border-radius: 5px;
-  position: relative;
-  width: 100%;
-  box-shadow: 0 -3px 20px rgb(179, 179, 179);
-  margin-top: -30px;
-
-  &::before {
-    content: "";
-    height: 20px;
-    width: 20px;
-    background-color: ${(props) => props.theme.white};
-    position: absolute;
-    top: -10px;
-    transform: rotate(45deg);
-    left: 280px;
-  }
-`;
-
-export const NavItem = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-`;
-
 export const Text = styled.p`
   font-size: ${(props) => (props.size ? `${props.size}` : "18px")};
   font-weight: ${(props) => (props.heavy ? "700" : "400")};
@@ -143,6 +139,10 @@ export const Text = styled.p`
     props.color ? `${props.color}` : `${(props) => props.theme.black}`};
   cursor: ${(props) => props.cursor && "pointer"};
   width: ${(props) => (props.width ? `${props.width}` : "50px")};
+  padding-top: ${(props) => (props.ptop ? `${props.ptop}` : "0px")};
+  padding-right: ${(props) => (props.pright ? `${props.pright}` : "0px")};
+  padding-bottom: ${(props) => (props.pbottom ? `${props.pbottom}` : "0px")};
+  padding-left: ${(props) => (props.pleft ? `${props.pleft}` : "0px")};
   margin-top: ${(props) => (props.top ? `${props.top}` : "0px")};
   margin-right: ${(props) => (props.right ? `${props.right}` : "0px")};
   margin-bottom: ${(props) => (props.bottom ? `${props.bottom}` : "0px")};
