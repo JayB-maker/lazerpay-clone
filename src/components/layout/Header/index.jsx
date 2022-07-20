@@ -132,12 +132,20 @@ const Header = () => {
                       pleft="20px"
                       pbottom="20px"
                       shadow="0 -3px 20px rgb(179, 179, 179)"
+                      bbg="white"
+                      btransform="rotate(45deg)"
+                      bwidth="20px"
+                      bheight="20px"
+                      btop="-10px"
+                      bleft="280px"
+                      bposition="absolute"
+                      bcontent="''"
                     >
                       <Text
                         heavy
                         width="100%"
+                        pbottom="10px"
                         style={{
-                          paddingBottom: "10px",
                           borderBottom: "0.5px solid rgb(179, 179, 179)",
                         }}
                       >
@@ -146,7 +154,21 @@ const Header = () => {
                       <Container display="grid" gridcolumn="1fr 1fr">
                         {item.navItems.map((subItem, key) => (
                           <LinkText to={subItem.link}>
-                            <Nav key={key}>
+                            <Container
+                              display="flex"
+                              flexdirection="column"
+                              gap="5px"
+                              mbottom="15px"
+                              ptop="10px"
+                              pbottom="10px"
+                              pright="10px"
+                              pleft="10px"
+                              color="black"
+                              radius="10px"
+                              hovercolor="#125bc9"
+                              hoverbg="#f4f3ee"
+                              key={key}
+                            >
                               <NavIcon>
                                 <i className={subItem.icon} />
                                 <TitleText heavy size="18px" width="100%">
@@ -158,7 +180,7 @@ const Header = () => {
                                   {subItem.description}
                                 </Text>
                               </NavDescription>
-                            </Nav>
+                            </Container>
                           </LinkText>
                         ))}
                       </Container>
@@ -231,7 +253,7 @@ const Header = () => {
                   <Text heavy mdwidth="100%" bottom="10px" mdsize="14px">
                     {item.nav.toUpperCase()}
                   </Text>
-                  <NavItem>
+                  <Container mddisplay="grid" mdgridcolumn="1fr 1fr">
                     {item.navItems.map((subItem, key) => (
                       <LinkText to={subItem.link}>
                         <Nav key={key}>
@@ -244,7 +266,7 @@ const Header = () => {
                         </Nav>
                       </LinkText>
                     ))}
-                  </NavItem>
+                  </Container>
                 </>
               </Navigations>
             ))}
