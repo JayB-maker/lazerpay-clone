@@ -54,6 +54,7 @@ const Header = () => {
   return (
     <>
       <Container
+        className="header"
         width="100%"
         position="fixed"
         ptop="24px"
@@ -61,7 +62,9 @@ const Header = () => {
         bg="white"
         index="10"
         mddisplay="none"
-        smdisplay="none"
+        sddisplay="none"
+        mdposition="unset"
+        // style={{ display: "none" }}
       >
         {scrolled && (
           <Container
@@ -263,7 +266,11 @@ const Header = () => {
                   <Text heavy mdwidth="100%" bottom="10px" mdsize="14px">
                     {item.nav.toUpperCase()}
                   </Text>
-                  <Container mddisplay="grid" mdgridcolumn="1fr 1fr">
+                  <Container
+                    mddisplay="grid"
+                    mdgridcolumn="1fr 1fr"
+                    smgridcolumn="1fr 1fr"
+                  >
                     {item.navItems.map((subItem, key) => (
                       <LinkText to={subItem.link}>
                         <Nav key={key}>
@@ -283,7 +290,11 @@ const Header = () => {
             <Container
               mdmtop="50px"
               mdgap="20px"
+              display="flex "
+              alignitems="center"
+              gap="50px"
               mdflexdirection="column"
+              smflexdirection="column"
               mdwidth="100%"
             >
               <LinkText to="/login" color="black" heavy mdsize="18px">
