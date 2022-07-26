@@ -361,3 +361,5 @@ export const getStartedDetails = [
     background: "#FCF7EF",
   },
 ];
+
+export const footerDetails = [{}];
