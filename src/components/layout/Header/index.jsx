@@ -61,6 +61,7 @@ const Header = () => {
         bg="white"
         index="10"
         mddisplay="none"
+        smdisplay="none"
       >
         {scrolled && (
           <Container
@@ -190,7 +191,16 @@ const Header = () => {
               </Container>
             ))}
           </Container>
-          <HeaderCTA>
+          <Container
+            flex="1"
+            display="flex"
+            alignitems="center"
+            justifycontent="flex-end"
+            width="100%"
+            gap="30px"
+            size="18px"
+            heavy
+          >
             <LinkText to="/login" size="15px" heavy color="black">
               Sign In
             </LinkText>
@@ -208,7 +218,7 @@ const Header = () => {
             >
               Create an account
             </LinkText>
-          </HeaderCTA>
+          </Container>
         </Container>
       </Container>
       <MobileHeader>
@@ -270,7 +280,12 @@ const Header = () => {
                 </>
               </Navigations>
             ))}
-            <HeaderCTA>
+            <Container
+              mdmtop="50px"
+              mdgap="20px"
+              mdflexdirection="column"
+              mdwidth="100%"
+            >
               <LinkText to="/login" color="black" heavy mdsize="18px">
                 Sign In
               </LinkText>
@@ -290,7 +305,7 @@ const Header = () => {
               >
                 Create an account
               </LinkText>
-            </HeaderCTA>
+            </Container>
           </MobileNav>
         )}
       </MobileHeader>
