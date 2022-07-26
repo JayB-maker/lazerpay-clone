@@ -38,6 +38,9 @@ export const Container = styled.div`
   grid-template-columns: ${(props) =>
     props.gridcolumn ? `${props.gridcolumn}` : "unset"};
   box-shadow: ${(props) => (props.shadow ? `${props.shadow}` : "unset")};
+  font-weight: ${(props) => (props.heavy ? "700" : "400")};
+  font-size: ${(props) => (props.size ? `${props.size}` : "20px")};
+  flex: ${(props) => (props.flex ? `${props.flex}` : "unset")};
 
   &:hover {
     background-color: ${(props) => props.hoverbg && `${props.hoverbg}`};
@@ -63,6 +66,21 @@ export const Container = styled.div`
     display: ${(props) => (props.mddisplay ? `${props.mddisplay}` : "unset")};
     grid-template-columns: ${(props) =>
       props.mdgridcolumn ? `${props.mdgridcolumn}` : "unset"};
+    flex-direction: ${(props) =>
+      props.mdflexdirection ? `${props.mdflexdirection}` : "unset"};
+    width: ${(props) => (props.mdwidth ? `${props.mdwidth}` : "unset")};
+    gap: ${(props) => (props.mdgap ? `${props.mdgap}` : "unset")};
+    margin-top: ${(props) => (props.mdmtop ? `${props.mdmtop}` : "0px")};
+  }
+
+  @media screen and (max-width: 600px) {
+    display: ${(props) => (props.smdisplay ? `${props.smdisplay}` : "none")};
+    grid-template-columns: ${(props) =>
+      props.smgridcolumn ? `${props.smgridcolumn}` : "unset"};
+    flex-direction: ${(props) =>
+      props.smflexdirection ? `${props.smflexdirection}` : "unset"};
+    gap: ${(props) => (props.smgap ? `${props.smgap}` : "unset")};
+    margin-top: ${(props) => (props.smmtop ? `${props.smmtop}` : "0px")};
   }
 `;
 
