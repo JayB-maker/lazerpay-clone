@@ -9,15 +9,16 @@ export const Container = styled.div`
   width: ${(props) => (props.width ? `${props.width}` : "unset")};
   max-width: ${(props) => (props.maxwidth ? `${props.maxwidth}` : "unset")};
   border-radius: ${(props) => (props.radius ? `${props.radius}` : "0px")};
-  // padding: ${(props) => (props.padding ? `${props.padding}` : "0px")};
-  padding-top: ${(props) => (props.ptop ? `${props.ptop}` : "0px")};
-  padding-right: ${(props) => (props.pright ? `${props.pright}` : "0px")};
-  padding-bottom: ${(props) => (props.pbottom ? `${props.pbottom}` : "0px")};
-  padding-left: ${(props) => (props.pleft ? `${props.pleft}` : "0px")};
-  margin-top: ${(props) => (props.mtop ? `${props.mtop}` : "0px")};
-  margin-right: ${(props) => (props.mright ? `${props.mright}` : "0px")};
-  margin-bottom: ${(props) => (props.mbottom ? `${props.mbottom}` : "0px")};
-  margin-left: ${(props) => (props.mleft ? `${props.mleft}` : "0px")};
+  padding: ${(props) => (props.padding ? `${props.padding}` : "0px")};
+  margin: ${(props) => (props.margin ? `${props.margin}` : "0px")};
+  // padding-top: ${(props) => (props.ptop ? `${props.ptop}` : "0px")};
+  // padding-right: ${(props) => (props.pright ? `${props.pright}` : "0px")};
+  // padding-bottom: ${(props) => (props.pbottom ? `${props.pbottom}` : "0px")};
+  // padding-left: ${(props) => (props.pleft ? `${props.pleft}` : "0px")};
+  // margin-top: ${(props) => (props.mtop ? `${props.mtop}` : "0px")};
+  // margin-right: ${(props) => (props.mright ? `${props.mright}` : "0px")};
+  // margin-bottom: ${(props) => (props.mbottom ? `${props.mbottom}` : "0px")};
+  // margin-left: ${(props) => (props.mleft ? `${props.mleft}` : "0px")};
   top: ${(props) => (props.top ? `${props.top}` : "unset")};
   left: ${(props) => (props.left ? `${props.left}` : "unset")};
   right: ${(props) => (props.right ? `${props.right}` : "unset")};
@@ -26,6 +27,8 @@ export const Container = styled.div`
   height: ${(props) => (props.height ? `${props.height}` : "unset")};
   z-index: ${(props) => (props.index ? `${props.index}` : "unset")};
   display: ${(props) => (props.display ? `${props.display}` : "unset")};
+  visibility: ${(props) =>
+    props.visibility ? `${props.visibility}` : "unset"};
   flex-direction: ${(props) =>
     props.flexdirection ? `${props.flexdirection}` : "unset"};
   content: ${(props) => (props.content ? `${props.content}` : "")};
@@ -48,6 +51,7 @@ export const Container = styled.div`
       props.hovercolor
         ? `${props.hovercolor}`
         : `${(props) => props.theme.black}`};
+  }
 
   &::before {
     content: ${(props) => (props.bcontent ? `${props.bcontent}` : "")};
@@ -63,24 +67,37 @@ export const Container = styled.div`
   }
 
   @media screen and (max-width: 1024px) {
-    display: ${(props) => (props.mddisplay ? `${props.mddisplay}` : "unset")};
+    display: ${(props) => props.mddisplay && `${props.mddisplay}`};
+    visibility: ${(props) =>
+      props.mvisibility ? `${props.mvisibility}` : "unset"};
     grid-template-columns: ${(props) =>
-      props.mdgridcolumn ? `${props.mdgridcolumn}` : "unset"};
+      props.mdgridcolumn && `${props.mdgridcolumn}`};
     flex-direction: ${(props) =>
-      props.mdflexdirection ? `${props.mdflexdirection}` : "unset"};
+      props.mdflexdirection && `${props.mdflexdirection}`};
+    position: ${(props) =>
+      props.mdposition ? `${props.mdposition}` : "unset"};
     width: ${(props) => (props.mdwidth ? `${props.mdwidth}` : "unset")};
     gap: ${(props) => (props.mdgap ? `${props.mdgap}` : "unset")};
-    margin-top: ${(props) => (props.mdmtop ? `${props.mdmtop}` : "0px")};
+    margin: ${(props) => (props.mdmargin ? `${props.mdmargin}` : "0px")};
+    padding: ${(props) => (props.mdpadding ? `${props.mdpadding}` : "0px")};
+    border-radius: ${(props) => (props.mdradius ? `${props.mdradius}` : "0px")};
+    justify-content: ${(props) =>
+      props.mdjustifycontent ? `${props.mdjustifycontent}` : "unset"};
   }
 
   @media screen and (max-width: 600px) {
-    display: ${(props) => (props.smdisplay ? `${props.smdisplay}` : "none")};
+    display: ${(props) => props.smdisplay && `${props.smdisplay}`};
+    visibility: ${(props) =>
+      props.svisibility ? `${props.svisibility}` : "unset"};
     grid-template-columns: ${(props) =>
       props.smgridcolumn ? `${props.smgridcolumn}` : "unset"};
     flex-direction: ${(props) =>
-      props.smflexdirection ? `${props.smflexdirection}` : "unset"};
+      props.smflexdirection && `${props.smflexdirection}`};
+    width: ${(props) => (props.smwidth ? `${props.smwidth}` : "unset")};
     gap: ${(props) => (props.smgap ? `${props.smgap}` : "unset")};
-    margin-top: ${(props) => (props.smmtop ? `${props.smmtop}` : "0px")};
+    margin: ${(props) => (props.smmargin ? `${props.smmargin}` : "0px")};
+    padding: ${(props) => (props.smpadding ? `${props.smpadding}` : "0px")};
+    border-radius: ${(props) => (props.smradius ? `${props.smradius}` : "0px")};
   }
 `;
 
@@ -101,15 +118,16 @@ export const LinkText = styled(Link)`
   border-radius: ${(props) => (props.radius ? `${props.radius}` : "0px")};
   width: ${(props) => props.width && `${props.width}`};
   text-align: ${(props) => (props.align ? `${props.align}` : "left")};
-  // padding: ${(props) => (props.padding ? `${props.padding}` : "0px")};
-  padding-top: ${(props) => (props.ptop ? `${props.ptop}` : "0px")};
-  padding-right: ${(props) => (props.pright ? `${props.pright}` : "0px")};
-  padding-bottom: ${(props) => (props.pbottom ? `${props.pbottom}` : "0px")};
-  padding-left: ${(props) => (props.pleft ? `${props.pleft}` : "0px")};
-  margin-top: ${(props) => (props.top ? `${props.top}` : "0px")};
-  margin-right: ${(props) => (props.right ? `${props.right}` : "0px")};
-  margin-bottom: ${(props) => (props.bottom ? `${props.bottom}` : "0px")};
-  margin-left: ${(props) => (props.left ? `${props.left}` : "0px")};
+  padding: ${(props) => (props.padding ? `${props.padding}` : "0px")};
+  margin: ${(props) => (props.margin ? `${props.margin}` : "0px")};
+  // padding-top: ${(props) => (props.ptop ? `${props.ptop}` : "0px")};
+  // padding-right: ${(props) => (props.pright ? `${props.pright}` : "0px")};
+  // padding-bottom: ${(props) => (props.pbottom ? `${props.pbottom}` : "0px")};
+  // padding-left: ${(props) => (props.pleft ? `${props.pleft}` : "0px")};
+  // margin-top: ${(props) => (props.top ? `${props.top}` : "0px")};
+  // margin-right: ${(props) => (props.right ? `${props.right}` : "0px")};
+  // margin-bottom: ${(props) => (props.bottom ? `${props.bottom}` : "0px")};
+  // margin-left: ${(props) => (props.left ? `${props.left}` : "0px")};
   flex: ${(props) => (props.flex ? `${props.flex}` : "unset")};
 
   @media screen and (max-width: 1024px) {
