@@ -57,14 +57,13 @@ const Header = () => {
         className="header"
         width="100%"
         position="fixed"
-        ptop="24px"
-        pbottom="24px"
+        padding="24px 0"
         bg="white"
         index="10"
+        height="80px"
         mddisplay="none"
         sddisplay="none"
         mdposition="unset"
-        // style={{ display: "none" }}
       >
         {scrolled && (
           <Container
@@ -80,10 +79,7 @@ const Header = () => {
           maxwidth="1408px"
           display="flex"
           width="98%"
-          mtop="0"
-          mbottom="0"
-          mright="auto"
-          mleft="auto"
+          margin="0 auto"
           gap="70px"
           alignitems="center"
           justifycontent="space-between"
@@ -115,7 +111,7 @@ const Header = () => {
                 </Text>
                 {isHover === key && item.navItems.length > 1 && (
                   <Container
-                    ptop="50px"
+                    padding="50px 0 0"
                     width="650px"
                     position="absolute"
                     right="50%"
@@ -130,11 +126,9 @@ const Header = () => {
                       gap="20px"
                       radius="5px"
                       mtop="-30px"
+                      margin="-30px 0 0"
                       flexdirection="column"
-                      ptop="20px"
-                      pright="20px"
-                      pleft="20px"
-                      pbottom="20px"
+                      padding="20px"
                       shadow="0 -3px 20px rgb(179, 179, 179)"
                       bbg="white"
                       btransform="rotate(45deg)"
@@ -162,11 +156,8 @@ const Header = () => {
                               display="flex"
                               flexdirection="column"
                               gap="5px"
-                              mbottom="15px"
-                              ptop="10px"
-                              pbottom="10px"
-                              pright="10px"
-                              pleft="10px"
+                              margin="0 0 15px"
+                              padding="10px"
                               color="black"
                               radius="10px"
                               hovercolor="#125bc9"
@@ -213,10 +204,7 @@ const Header = () => {
               heavy
               color="white"
               bg="#125bc9"
-              ptop="7px"
-              pbottom="7px"
-              pright="10px"
-              pleft="10px"
+              padding="7px 10px"
               radius="5px"
             >
               Create an account
@@ -288,11 +276,12 @@ const Header = () => {
               </Navigations>
             ))}
             <Container
-              mdmtop="50px"
+              mdmmargin="50px 0 0"
+              smmargin="30px 0 0"
               mdgap="20px"
               display="flex "
               alignitems="center"
-              gap="50px"
+              smgap="20px"
               mdflexdirection="column"
               smflexdirection="column"
               mdwidth="100%"
@@ -305,8 +294,7 @@ const Header = () => {
                 mdsize="18px"
                 color="white"
                 bg="#125bc9"
-                ptop="10px"
-                pbottom="10px"
+                padding="10px 0"
                 radius="5px"
                 mdwidth="100%"
                 smwidth="100%"
