@@ -1,30 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { Container } from "../../ui";
 import HeroLeft from "./HeroLeft/HeroLeft";
 import HeroRight from "./HeroRight/HeroRight";
 
-const Body = styled.div`
-  width: 100%;
-  margin-top: 60px;
-
-  @media screen and (max-width: 1024px) {
-    margin-top: 0;
-  }
-`;
-const HeroContainer = styled.div`
-  background-color: ${(props) => props.theme.primary};
-  margin: 0 auto;
-  max-width: 1408px;
-  width: 98%;
-  padding: 50px 0;
-  border-radius: 5px;
-
-  @media screen and (max-width: 1024px) {
-    width: 100vw;
-    border-radius: 0;
-    padding: 100px 0 50px;
-  }
-`;
 const InnerHeroContainer = styled.div`
   width: 89%;
   margin: 0 auto;
@@ -50,14 +29,37 @@ const InnerHeroContainer = styled.div`
 const HeroSection = () => {
   return (
     <>
-      <Body>
-        <HeroContainer>
-          <InnerHeroContainer>
+      <Container display="block" width="100%" margin="50px auto" smmargin="0">
+        <Container
+          mdpadding="100px 0 50px"
+          smpadding="100px 0 50px"
+          display="block"
+          bg="#f4f3ee"
+          margin="0 auto"
+          padding="50px 0"
+          maxwidth="1408px"
+          width="98%"
+          mdwidth="100vw"
+          smwidth="100vw"
+          radius="5px"
+        >
+          <Container
+            width="60%"
+            margin="0 auto"
+            display="flex"
+            alignitems="center"
+            mdmargin="0 auto"
+            mdwidth="60%"
+            mdflexdirection="column"
+            mdjustifycontent="center"
+            mdgap="50px"
+            smgap="50px"
+          >
             <HeroLeft />
             <HeroRight />
-          </InnerHeroContainer>
-        </HeroContainer>
-      </Body>
+          </Container>
+        </Container>
+      </Container>
     </>
   );
 };
