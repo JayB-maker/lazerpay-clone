@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { LinkText } from "../../../ui";
 
 const CTA = styled.div`
   display: flex;
