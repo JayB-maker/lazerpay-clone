@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Image, Text } from "../../../ui";
+import { Image } from "../../../ui";
 
 const TrustedContainer = styled.div`
   display: flex;
@@ -41,8 +41,18 @@ const Trusted = () => {
           src="assets/payday-logo.png"
           alt="payday"
         />
-        <Image src="assets/betdemand-logo.png" alt="betdemand" />
-        <Image src="assets/brace-logo.png" alt="brace" />
+        <Image
+          width="100%"
+          mdwidth="90%"
+          src="assets/betdemand-logo.png"
+          alt="betdemand"
+        />
+        <Image
+          width="100%"
+          mdwidth="70%"
+          src="assets/brace-logo.png"
+          alt="brace"
+        />
       </TrustedImages>
     </TrustedContainer>
   );
