@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { ThemeProvider } from "styled-components";
 import AppRoutes from "./AppRoutes";
-import { Dark, GlobalStyle, Light } from "./Theme";
+import { GlobalStyle, Light } from "./Theme";
 
 const App = () => {
-  const [isDarkmode, setIsDarkMode] = useState(false);
+  // const [isDarkmode, setIsDarkMode] = useState(false);
 
-  const toggle = () => {
-    setIsDarkMode(!isDarkmode);
-  };
+  // const toggle = () => {
+  //   setIsDarkMode(!isDarkmode);
+  // };
 
   return (
     <>
-      <ThemeProvider theme={isDarkmode ? Dark : Light}>
+      <ThemeProvider theme={Light}>
         <GlobalStyle />
         <AppRoutes />
       </ThemeProvider>
