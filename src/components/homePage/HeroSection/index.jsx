@@ -1,30 +1,30 @@
 import React from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 import { Container } from "../../ui";
 import HeroLeft from "./HeroLeft/HeroLeft";
 import HeroRight from "./HeroRight/HeroRight";
 
-const InnerHeroContainer = styled.div`
-  width: 89%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
+// const InnerHeroContainer = styled.div`
+//   width: 89%;
+//   margin: 0 auto;
+//   display: flex;
+//   align-items: center;
 
-  @media screen and (max-width: 1024px) {
-    width: 60%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-  }
+//   @media screen and (max-width: 1024px) {
+//     width: 60%;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 50px;
+//   }
 
-  @media screen and (max-width: 600px) {
-    width: 100%;
-    padding: 0 16px;
-    flex-direction: column;
-    gap: 50px;
-  }
-`;
+//   @media screen and (max-width: 600px) {
+//     width: 100%;
+//     padding: 0 16px;
+//     flex-direction: column;
+//     gap: 50px;
+//   }
+// `;
 
 const HeroSection = () => {
   return (
@@ -44,12 +44,13 @@ const HeroSection = () => {
           radius="5px"
         >
           <Container
-            width="60%"
+            width="90%"
             margin="0 auto"
+            smmargin="0 auto"
             display="flex"
             alignitems="center"
             mdmargin="0 auto"
-            mdwidth="60%"
+            mdwidth="95%"
             mdflexdirection="column"
             mdjustifycontent="center"
             mdgap="50px"
