@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Image } from "../../../ui";
 
 const RightDiv = styled.div`
   flex: 4;
