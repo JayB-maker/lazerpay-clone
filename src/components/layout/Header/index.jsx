@@ -3,18 +3,11 @@ import { navs } from "../../../data/data";
 import {
   Image,
   LinkText,
-  InnerHeaders,
-  Navbar,
-  Navs,
-  NavItems,
   Nav,
   Text,
   NavIcon,
   NavDescription,
-  HeaderCTA,
-  NavItem,
   TitleText,
-  NavWrapper,
   MobileHeader,
   MobileNav,
   InnerMobileHeader,
@@ -72,7 +65,7 @@ const Header = () => {
             height="100%"
             index="-1"
             top="0"
-            style={{ boxShadow: "0 3px 20px rgb(179, 179, 179)" }}
+            style={{ boxShadow: "0 1px 10px rgb(0, 0, 0)" }}
           ></Container>
         )}
         <Container
