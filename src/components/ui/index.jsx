@@ -44,6 +44,7 @@ export const Container = styled.div`
   font-weight: ${(props) => (props.heavy ? "700" : "400")};
   font-size: ${(props) => (props.size ? `${props.size}` : "20px")};
   flex: ${(props) => (props.flex ? `${props.flex}` : "unset")};
+  border: ${(props) => (props.border ? `${props.border}` : "unset")};
 
   &:hover {
     background-color: ${(props) => props.hoverbg && `${props.hoverbg}`};
@@ -76,7 +77,7 @@ export const Container = styled.div`
       props.mdflexdirection && `${props.mdflexdirection}`};
     position: ${(props) =>
       props.mdposition ? `${props.mdposition}` : "unset"};
-    width: ${(props) => (props.mdwidth ? `${props.mdwidth}` : "unset")};
+    width: ${(props) => props.mdwidth && `${props.mdwidth}`};
     gap: ${(props) => (props.mdgap ? `${props.mdgap}` : "unset")};
     margin: ${(props) => (props.mdmargin ? `${props.mdmargin}` : "0px")};
     padding: ${(props) => (props.mdpadding ? `${props.mdpadding}` : "0px")};
@@ -93,7 +94,7 @@ export const Container = styled.div`
       props.smgridcolumn ? `${props.smgridcolumn}` : "unset"};
     flex-direction: ${(props) =>
       props.smflexdirection && `${props.smflexdirection}`};
-    width: ${(props) => (props.smwidth ? `${props.smwidth}` : "unset")};
+    width: ${(props) => props.smwidth && `${props.smwidth}`};
     gap: ${(props) => (props.smgap ? `${props.smgap}` : "unset")};
     margin: ${(props) => (props.smmargin ? `${props.smmargin}` : "0px")};
     padding: ${(props) => (props.smpadding ? `${props.smpadding}` : "0px")};
@@ -130,9 +131,14 @@ export const LinkText = styled(Link)`
   // margin-left: ${(props) => (props.left ? `${props.left}` : "0px")};
   flex: ${(props) => (props.flex ? `${props.flex}` : "unset")};
 
+  &:hover {
+    color: ${(props) => props.hcolor && `${props.hcolor}`};
+  }
+
   @media screen and (max-width: 1024px) {
     width: ${(props) => props.mdwidth && `${props.mdwidth}`};
     font-size: ${(props) => (props.mdsize ? `${props.mdsize}` : "20px")};
+    line-height: ${(props) => props.mdlineheight && `${props.mdlineheight}`};
   }
   // @media screen and (max-width: 600px) {
   //   width: ${(props) => props.smwidth && `${props.smwidth}`};
@@ -197,7 +203,8 @@ export const Text = styled.p`
 
   @media screen and (max-width: 1024px) {
     font-size: ${(props) => (props.mdsize ? `${props.mdsize}` : "18px")};
-    width: ${(props) => (props.mdwidth ? `${props.mdwidth}` : "50px")};
+    text-align: ${(props) => props.mdtextalign && `${props.mdtextalign}`};
+    width: ${(props) => props.mdwidth && `${props.mdwidth}`};
   }
   // @media screen and (max-width: 600px) {
   //   font-size: ${(props) => (props.smsize ? `${props.smsize}` : "18px")};
@@ -230,7 +237,7 @@ export const TitleText = styled.h3`
 
   @media screen and (max-width: 1024px) {
     font-size: ${(props) => (props.mdsize ? `${props.mdsize}` : "20px")};
-    width: ${(props) => (props.mdwidth ? `${props.mdwidth}` : "50px")};
+    width: ${(props) => props.mdwidth && `${props.mdwidth}`};
   }
   // @media screen and (max-width: 600px) {
   //   font-size: ${(props) => (props.smsize ? `${props.smsize}` : "20px")};
