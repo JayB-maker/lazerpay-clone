@@ -6,7 +6,7 @@ import HeroSection from "../components/homePage/HeroSection";
 import PowerOfCrypto from "../components/homePage/PowerOfCrypto";
 import PowerYourApp from "../components/homePage/PowerYourApp";
 import WhoCanUseLazerPay from "../components/homePage/WhoCanUseLazerPay";
-// import Footer from "../components/layout/Footer";
+import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import { acceptPaymentDetails, growWithLazerPayDetails } from "../data/data";
 
@@ -22,7 +22,7 @@ const HomePage = () => {
       <PowerYourApp />
       <WhoCanUseLazerPay />
       <GetStarted />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

@@ -1,8 +1,10 @@
 export const navs = [
   {
     nav: "Product",
+    index: 1,
     navItems: [
       {
+        id: 1,
         icon: "fa-solid fa-bag-shopping",
         navItem: "Checkout",
         description:
@@ -10,18 +12,21 @@ export const navs = [
         link: "/",
       },
       {
+        id: 2,
         icon: "fa-solid fa-coins",
         navItem: "Lazer Token",
         description: "Utility token on the lazerpay ecosystem",
         link: "/",
       },
       {
+        id: 3,
         icon: "fa-solid fa-inbox",
         navItem: "Earn",
         description: "Crypto investment with stellar interests, and zero risks",
         link: "/",
       },
       {
+        id: 4,
         icon: "fa-solid fa-link",
         navItem: "Payment Links",
         description:
@@ -29,6 +34,7 @@ export const navs = [
         link: "/",
       },
       {
+        id: 5,
         icon: "fa-solid fa-eject",
         navItem: "Payment Buttons",
         description:
@@ -39,14 +45,17 @@ export const navs = [
   },
   {
     nav: "Use Cases",
+    index: 2,
     navItems: [
       {
+        id: 6,
         icon: "fa-solid fa-circle-plus",
         navItem: "Creators",
         description: "Get paid easily doing creative work with crypto.",
         link: "/",
       },
       {
+        id: 7,
         icon: "fa-solid fa-signal",
         navItem: "Startups",
         description:
@@ -54,12 +63,14 @@ export const navs = [
         link: "/",
       },
       {
+        id: 8,
         icon: "fa-solid fa-apple-whole",
         navItem: "Saas",
         description: "Collect recurring payments from customers anywhere.",
         link: "/",
       },
       {
+        id: 9,
         icon: "fa-solid fa-dumpster",
         navItem: "E-commerce",
         description:
@@ -67,6 +78,7 @@ export const navs = [
         link: "/",
       },
       {
+        id: 10,
         icon: "fa-solid fa-user-tie",
         navItem: "Professionals",
         description: "Recieve unrestricted payment from your clients anywhere.",
@@ -76,8 +88,10 @@ export const navs = [
   },
   {
     nav: "Pricing",
+    index: 3,
     navItems: [
       {
+        id: 11,
         icon: "fa-solid fa-tag",
         navItem: "Pricing",
         link: "/",
@@ -86,8 +100,10 @@ export const navs = [
   },
   {
     nav: "For Business",
+    index: 4,
     navItems: [
       {
+        id: 12,
         icon: "fa-solid fa-layer-group",
         navItem: "Why LazerPay",
         description:
@@ -95,12 +111,14 @@ export const navs = [
         link: "/",
       },
       {
+        id: 13,
         icon: "fa-solid fa-microchip",
         navItem: "How it Works",
         description: "Learn how we can help grow your business with crypto.",
         link: "/",
       },
       {
+        id: 14,
         icon: "fa-solid fa-bag-shopping",
         navItem: "Checkout Demo",
         description:
@@ -111,14 +129,17 @@ export const navs = [
   },
   {
     nav: "For Developer",
+    index: 5,
     navItems: [
       {
+        id: 15,
         icon: "fa-solid fa-sun",
         navItem: "Quick Start",
         description: "Integrate Lazerpay products and tools in minutes.",
         link: "/",
       },
       {
+        id: 16,
         icon: "fa-solid fa-swatchbook",
         navItem: "Libraries",
         description:
@@ -126,6 +147,7 @@ export const navs = [
         link: "/",
       },
       {
+        id: 17,
         icon: "fa-solid fa-folder-open",
         navItem: "API Documentation",
         description: "Guides, resources and refrences to build with Lazerpay.",
@@ -135,14 +157,17 @@ export const navs = [
   },
   {
     nav: "Company",
+    index: 6,
     navItems: [
       {
+        id: 18,
         icon: "fa-solid fa-briefcase",
         navItem: "About",
         description: "Empowering businesses through cross-border payments.",
         link: "/",
       },
       {
+        id: 19,
         icon: "fa-solid fa-envelope",
         navItem: "Contact",
         description:
@@ -150,6 +175,7 @@ export const navs = [
         link: "/",
       },
       {
+        id: 20,
         icon: "fa-solid fa-people-group",
         navItem: "Team",
         description:
@@ -157,6 +183,7 @@ export const navs = [
         link: "/",
       },
       {
+        id: 21,
         icon: "fa-solid fa-blog",
         navItem: "Blog",
         description:
@@ -164,12 +191,14 @@ export const navs = [
         link: "/",
       },
       {
+        id: 22,
         icon: "fa-solid fa-user",
         navItem: "Careers",
         description: "Join forces with us to power borderless crypto payments.",
         link: "/",
       },
       {
+        id: 23,
         icon: "fa-solid fa-address-card",
         navItem: "Press",
         description:
@@ -362,4 +391,193 @@ export const getStartedDetails = [
   },
 ];
 
-export const footerDetails = [{}];
+export const socialHandleDetails = [
+  {
+    icon: "fa-brands fa-facebook-f",
+    path: "/",
+  },
+  {
+    icon: "fa-brands fa-twitter",
+    path: "/",
+  },
+  {
+    icon: "fa-brands fa-instagram",
+    path: "/",
+  },
+  {
+    icon: "fa-brands fa-linkedin",
+    path: "/",
+  },
+  {
+    icon: "fa-brands fa-telegram",
+    path: "/",
+  },
+];
+
+export const seconDivDetails = [
+  {
+    Heading: "Products",
+    menus: [
+      {
+        handle: "Checkout",
+        path: "/",
+      },
+      {
+        handle: "Earn",
+        path: "/",
+      },
+      {
+        handle: "Lazer Tokens",
+        path: "/",
+      },
+      {
+        handle: "Payment Links",
+        path: "/",
+      },
+      {
+        handle: "Payment Buttons",
+        path: "/",
+      },
+    ],
+  },
+];
+export const thirdDivDetails = [
+  {
+    Heading: "Use Cases",
+    menus: [
+      {
+        handle: "Creators",
+        path: "/",
+      },
+      {
+        handle: "Digital Platforms",
+        path: "/",
+      },
+      {
+        handle: "Saas",
+        path: "/",
+      },
+      {
+        handle: "Ecommerce",
+        path: "/",
+      },
+      {
+        handle: "Professionals",
+        path: "/",
+      },
+    ],
+  },
+];
+export const forthDivDetails = [
+  {
+    Heading: "Businesses",
+    menus: [
+      {
+        handle: "Why use Lazerpay",
+        path: "/",
+      },
+      {
+        handle: "How it works",
+        path: "/",
+      },
+      {
+        handle: "Checkout Demo",
+        path: "/",
+      },
+    ],
+  },
+  {
+    Heading: "Company",
+    menus: [
+      {
+        handle: "Pricing",
+        path: "/",
+      },
+      {
+        handle: "About",
+        path: "/",
+      },
+      {
+        handle: "Team",
+        path: "/",
+      },
+      {
+        handle: "FAQs",
+        path: "/",
+      },
+      {
+        handle: "Blog",
+        path: "/",
+      },
+      {
+        handle: "Careers",
+        path: "/",
+      },
+      {
+        handle: "Press",
+        path: "/",
+      },
+      {
+        handle: "Contact Us",
+        path: "/",
+      },
+    ],
+  },
+];
+
+export const FifthDivDetails = [
+  {
+    Heading: "Developers",
+    menus: [
+      {
+        handle: "Quick Start",
+        path: "/",
+      },
+      {
+        handle: "Libraries",
+        path: "/",
+      },
+      {
+        handle: "API Documentation",
+        path: "/",
+      },
+    ],
+  },
+  {
+    Heading: "Legal",
+    menus: [
+      {
+        handle: "Privacy Policy",
+        path: "/",
+      },
+      {
+        handle: "Term of Use",
+        path: "/",
+      },
+      {
+        handle: "AML & KYC Policy",
+        path: "/",
+      },
+      {
+        handle: "Security",
+        path: "/",
+      },
+    ],
+  },
+];
+
+export const AddressDetails = [
+  {
+    country: "Nigeria",
+    details:
+      "No 2, Angle-View Estate, Chevron Alternative Lekki, Lagos, Nigeria",
+  },
+  {
+    country: "United State",
+    details: "651 N Broad St, New Castle, Delaware, United States",
+  },
+  {
+    country: "British Virgin Islands",
+    details: "Columbus Centre, Road Town, Tortola, British Virgin Islands.",
+  },
+];
